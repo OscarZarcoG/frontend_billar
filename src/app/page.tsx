@@ -9,7 +9,6 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Check if user is authenticated and redirect accordingly
     if (authService.isAuthenticated()) {
       router.push('/dashboard');
     } else {
