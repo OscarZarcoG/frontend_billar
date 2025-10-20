@@ -1,3 +1,37 @@
-export default function Page() {
-  return <h1>Hello, Next.js!</h1>
+'use client';
+
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { Box, CircularProgress, Typography } from '@mui/material';
+import { authService } from '../services/auth';
+
+export default function HomePage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Check if user is authenticated and redirect accordingly
+    if (authService.isAuthenticated()) {
+      router.push('/dashboard');
+    } else {
+      router.push('/login');
+    }
+  }, [router]);
+
+  return (
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #6750A4 0%, #EADDFF 100%)',
+      }}
+    >
+      <CircularProgress size={60} sx={{ color: 'white', mb: 2 }} />
+      <Typography variant="h6" sx={{ color: 'white' }}>
+        Cargando...
+      </Typography>
+    </Box>
+  );
 }
