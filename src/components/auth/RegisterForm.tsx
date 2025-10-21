@@ -28,7 +28,7 @@ import {
   Apple,
 } from '@mui/icons-material';
 import { authService } from '../../services/auth';
-import Logotipo from '../ui/logotipo';  
+import Logotipo from '../ui/logotipo';
 
 const schema = yup.object({
   username: yup
@@ -126,7 +126,6 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
           overflow: 'hidden',
         }}
       >
-        {/* Header */}
         <Box
           sx={{
             textAlign: 'center',
@@ -135,7 +134,21 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
             px: 4,
           }}
         >
-          <Logotipo />
+          <Box
+            sx={{
+              width: 100,
+              height: 100,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '0 auto 20px',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(0, 122, 255, 0.1)',
+              boxShadow: '0 10px 20px rgba(0, 122, 255, 0.2)',
+            }}
+          >
+            <Logotipo />
+          </Box>
           <Typography
             variant="h4"
             sx={{
@@ -177,8 +190,6 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                   {error}
                 </Alert>
               )}
-
-              {/* Personal Information */}
               <Typography
                 variant="h6"
                 sx={{
@@ -191,7 +202,7 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                 Información Personal
               </Typography>
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <TextField
                     {...register('first_name')}
                     label="Nombre"
@@ -214,7 +225,7 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                     }}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <TextField
                     {...register('last_name')}
                     label="Apellido"
@@ -222,6 +233,13 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                     fullWidth
                     error={!!errors.last_name}
                     helperText={errors.last_name?.message}
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <Person sx={{ color: '#86868B' }} />
+                        </InputAdornment>
+                      ),
+                    }}
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         height: 56,
@@ -276,8 +294,6 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                   },
                 }}
               />
-
-              {/* Account Security */}
               <Typography
                 variant="h6"
                 sx={{
@@ -357,8 +373,6 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                   },
                 }}
               />
-
-              {/* Additional Information */}
               <Typography
                 variant="h6"
                 sx={{
@@ -372,7 +386,7 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
               </Typography>
 
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <TextField
                     {...register('phone')}
                     label="Teléfono (Opcional)"
@@ -395,7 +409,7 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                     }}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <TextField
                     {...register('birthday')}
                     label="Fecha de Nacimiento"
@@ -423,7 +437,7 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
               </Grid>
 
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <TextField
                     {...register('gender')}
                     label="Género"
@@ -444,7 +458,7 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                     <MenuItem value="O">Otro</MenuItem>
                   </TextField>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <TextField
                     {...register('role')}
                     label="Rol"

@@ -90,7 +90,6 @@ export default function LoginForm({ onSuccess, onRegisterClick }: LoginFormProps
           overflow: 'hidden',
         }}
       >
-        {/* Header */}
         <Box
           sx={{
             textAlign: 'center',
@@ -136,7 +135,6 @@ export default function LoginForm({ onSuccess, onRegisterClick }: LoginFormProps
           </Typography>
         </Box>
 
-        {/* Form */}
         <Box sx={{ px: 4, pb: 6 }}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Stack spacing={3}>
