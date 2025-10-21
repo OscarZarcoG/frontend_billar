@@ -1,0 +1,221 @@
+{
+  "common": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "export": "Export",
+    "import": "Import",
+    "settings": "Settings",
+    "help": "Help",
+    "support": "Support",
+    "contact": "Contact",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "tables": "Tables",
+    "reservations": "Reservations",
+    "payments": "Payments",
+    "reports": "Reports",
+    "customers": "Customers",
+    "inventory": "Inventory",
+    "settings": "Settings",
+    "notifications": "Notifications"
+  },
+  "hero": {
+    "title_part1": "Manage your",
+    "title_highlight": "Billiards",
+    "title_part2": "Hall like a Professional",
+    "subtitle": "Comprehensive system for managing tables, reservations, consumption and business analysis. Optimize operations and maximize profits.",
+    "cta_primary": "Start Free",
+    "cta_secondary": "View Demo",
+    "trust_indicator": "Trusted by more than 500+ billiards halls",
+    "dashboard_title": "Real-Time Dashboard",
+    "features": {
+      "table_management": {
+        "title": "Table Management",
+        "description": "Complete control of all billiard tables"
+      },
+      "smart_reservations": {
+        "title": "Smart Reservations",
+        "description": "Automated and efficient reservation system"
+      },
+      "real_time_analytics": {
+        "title": "Real-Time Analytics",
+        "description": "Detailed business reports and statistics"
+      }
+    }
+  },
+  "features": {
+    "title": "The leading platform for comprehensive billiard hall management",
+    "subtitle": "Optimize your operations, maximize your profits and provide the best experience to your customers",
+    "cta_primary": "Get Started",
+    "cta_secondary": "Watch Demo",
+    "watch_video": "Watch Video"
+  },
+  "footer": {
+    "description": "The leading platform for comprehensive billiard hall management. Optimize your operations, maximize your profits and provide the best experience to your customers.",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Get the latest updates and tips for your business.",
+      "subscribe": "Subscribe"
+    },
+    "follow_us": "Follow Us",
+    "sections": {
+      "product": "Product",
+      "company": "Company",
+      "support": "Support",
+      "legal": "Legal"
+    },
+    "product_links": {
+      "table_management": "Table Management",
+      "reservation_system": "Reservation System",
+      "inventory_control": "Inventory Control",
+      "reports_analytics": "Reports & Analytics",
+      "mobile_app": "Mobile App",
+      "integrations": "Integrations"
+    },
+    "company_links": {
+      "about_us": "About Us",
+      "our_team": "Our Team",
+      "careers": "Careers",
+      "press": "Press",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "support_links": {
+      "help_center": "Help Center",
+      "documentation": "Documentation",
+      "tutorials": "Tutorials",
+      "system_status": "System Status",
+      "technical_support": "Technical Support",
+      "community": "Community"
+    },
+    "legal_links": {
+      "terms_of_service": "Terms of Service",
+      "privacy_policy": "Privacy Policy",
+      "cookie_policy": "Cookie Policy",
+      "gdpr": "GDPR"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign In",
+      "subtitle": "Access your account",
+      "email": "Email",
+      "password": "Password",
+      "remember_me": "Remember me",
+      "forgot_password": "Forgot your password?",
+      "no_account": "Don't have an account?",
+      "sign_up": "Sign up"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join our platform",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "phone": "Phone (Optional)",
+      "additional_info": "Additional Information",
+      "already_have_account": "Already have an account?",
+      "sign_in": "Sign in",
+      "terms_agreement": "I agree to the terms and conditions"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "overview": "Overview",
+    "quick_actions": "Quick Actions",
+    "new_reservation": "New Reservation",
+    "process_payment": "Process Payment",
+    "view_reports": "View Reports",
+    "manage_tables": "Manage Tables",
+    "recent_activity": "Recent Activity",
+    "statistics": "Statistics",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "role": {
+      "admin": "Administrator",
+      "manager": "Manager",
+      "employee": "Employee",
+      "client": "Client"
+    }
+  },
+  "tables": {
+    "title": "Table Management",
+    "available": "Available",
+    "occupied": "Occupied",
+    "reserved": "Reserved",
+    "maintenance": "Maintenance",
+    "table_number": "Table Number",
+    "status": "Status",
+    "time_remaining": "Time Remaining",
+    "customer": "Customer",
+    "actions": "Actions"
+  },
+  "reservations": {
+    "title": "Reservations",
+    "new_reservation": "New Reservation",
+    "customer_name": "Customer Name",
+    "table": "Table",
+    "date": "Date",
+    "time": "Time",
+    "duration": "Duration",
+    "status": "Status",
+    "confirmed": "Confirmed",
+    "pending": "Pending",
+    "cancelled": "Cancelled"
+  },
+  "payments": {
+    "title": "Payments",
+    "amount": "Amount",
+    "method": "Method",
+    "date": "Date",
+    "status": "Status",
+    "paid": "Paid",
+    "pending": "Pending",
+    "refunded": "Refunded"
+  },
+  "reports": {
+    "title": "Reports",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "revenue": "Revenue",
+    "occupancy": "Occupancy",
+    "customers": "Customers"
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "network": "Connection error",
+    "validation": "Validation error",
+    "unauthorized": "Unauthorized",
+    "not_found": "Not found",
+    "server_error": "Server error"
+  },
+  "success": {
+    "saved": "Successfully saved",
+    "deleted": "Successfully deleted",
+    "updated": "Successfully updated",
+    "created": "Successfully created"
+  }
+}

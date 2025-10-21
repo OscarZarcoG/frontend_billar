@@ -7,17 +7,17 @@ import {
 export const heroFeatures = [
   {
     icon: TableBar,
-    title: 'Gestión de Mesas',
-    description: 'Control completo de todas las mesas de billar',
+    title: 'hero.features.table_management.title',
+    description: 'hero.features.table_management.description',
   },
   {
     icon: Schedule,
-    title: 'Reservas Inteligentes',
-    description: 'Sistema de reservas automatizado y eficiente',
+    title: 'hero.features.smart_reservations.title',
+    description: 'hero.features.smart_reservations.description',
   },
   {
     icon: TrendingUp,
-    title: 'Análisis en Tiempo Real',
-    description: 'Reportes y estadísticas detalladas del negocio',
+    title: 'hero.features.real_time_analytics.title',
+    description: 'hero.features.real_time_analytics.description',
   },
 ];

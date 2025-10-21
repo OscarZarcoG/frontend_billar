@@ -7,37 +7,37 @@ import {
 } from '@mui/icons-material';
 
 export const productLinks = [
-  { label: 'Gestión de Mesas', href: '#' },
-  { label: 'Sistema de Reservas', href: '#' },
-  { label: 'Control de Inventario', href: '#' },
-  { label: 'Reportes y Analytics', href: '#' },
-  { label: 'App Móvil', href: '#' },
-  { label: 'Integraciones', href: '#' },
+  { label: 'footer.product_links.table_management', href: '#' },
+  { label: 'footer.product_links.reservation_system', href: '#' },
+  { label: 'footer.product_links.inventory_control', href: '#' },
+  { label: 'footer.product_links.reports_analytics', href: '#' },
+  { label: 'footer.product_links.mobile_app', href: '#' },
+  { label: 'footer.product_links.integrations', href: '#' },
 ];
 
 export const companyLinks = [
-  { label: 'Acerca de Nosotros', href: '#' },
-  { label: 'Nuestro Equipo', href: '#' },
-  { label: 'Carreras', href: '#' },
-  { label: 'Prensa', href: '#' },
-  { label: 'Blog', href: '#' },
-  { label: 'Contacto', href: '#' },
+  { label: 'footer.company_links.about_us', href: '#' },
+  { label: 'footer.company_links.our_team', href: '#' },
+  { label: 'footer.company_links.careers', href: '#' },
+  { label: 'footer.company_links.press', href: '#' },
+  { label: 'footer.company_links.blog', href: '#' },
+  { label: 'footer.company_links.contact', href: '#' },
 ];
 
 export const supportLinks = [
-  { label: 'Centro de Ayuda', href: '#' },
-  { label: 'Documentación', href: '#' },
-  { label: 'Tutoriales', href: '#' },
-  { label: 'Estado del Sistema', href: '#' },
-  { label: 'Soporte Técnico', href: '#' },
-  { label: 'Comunidad', href: '#' },
+  { label: 'footer.support_links.help_center', href: '#' },
+  { label: 'footer.support_links.documentation', href: '#' },
+  { label: 'footer.support_links.tutorials', href: '#' },
+  { label: 'footer.support_links.system_status', href: '#' },
+  { label: 'footer.support_links.technical_support', href: '#' },
+  { label: 'footer.support_links.community', href: '#' },
 ];
 
 export const legalLinks = [
-  { label: 'Términos de Servicio', href: '#' },
-  { label: 'Política de Privacidad', href: '#' },
-  { label: 'Política de Cookies', href: '#' },
-  { label: 'GDPR', href: '#' },
+  { label: 'footer.legal_links.terms_of_service', href: '#' },
+  { label: 'footer.legal_links.privacy_policy', href: '#' },
+  { label: 'footer.legal_links.cookie_policy', href: '#' },
+  { label: 'footer.legal_links.gdpr', href: '#' },
 ];
 
 export const socialLinks = [

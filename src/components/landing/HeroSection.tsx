@@ -27,8 +27,11 @@ import { floatAnimation, getFloatingElementStyles } from 'utils/landing/animatio
 import Image from 'next/image';
 import { ButtonsNav } from '../ui/Buttons-nav';
 import Dashboard from '../../app/dashboard/page';
+import { useTranslation } from '../../hooks/language/useTranslation';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <Box
       sx={{
@@ -87,10 +90,9 @@ export default function HeroSection() {
             </Typography>
           </Box>
 
-          {/* <ButtonsNav /> */}
+          <ButtonsNav />
         </Box>
 
-        {/* Hero Content */}
         <Grid container spacing={6} alignItems="center" sx={{ minHeight: '80vh' }}>
           <Grid size={{ xs: 12, lg: 6 }}>
             <Box sx={{ textAlign: { xs: 'center', lg: 'left' } }}>
@@ -105,7 +107,7 @@ export default function HeroSection() {
                   textShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
                 }}
               >
-                Gestiona tu Salón de{' '}
+                {t('hero.title_part1')}{' '}
                 <Box
                   component="span"
                   sx={{
@@ -115,9 +117,9 @@ export default function HeroSection() {
                     backgroundClip: 'text',
                   }}
                 >
-                  Billar
+                  {t('hero.title_highlight')}
                 </Box>{' '}
-                como un Profesional
+                {t('hero.title_part2')}
               </Typography>
 
               <Typography
@@ -132,8 +134,7 @@ export default function HeroSection() {
                   mx: { xs: 'auto', lg: 0 },
                 }}
               >
-                Sistema integral para la administración de mesas, reservas, consumos y
-                análisis de tu negocio. Optimiza operaciones y maximiza ganancias.
+                {t('hero.subtitle')}
               </Typography>
 
               <Stack
@@ -147,14 +148,14 @@ export default function HeroSection() {
                   startIcon={<PlayArrow />}
                   sx={getButtonStyles('primary')}
                 >
-                  Comenzar Gratis
+                  {t('hero.cta_primary')}
                 </Button>
                 <Button
                   variant="outlined"
                   size="large"
                   sx={getButtonStyles('outline')}
                 >
-                  Ver Demo
+                  {t('hero.cta_secondary')}
                 </Button>
               </Stack>
 
@@ -172,7 +173,7 @@ export default function HeroSection() {
                     fontSize: '0.875rem',
                   }}
                 >
-                  Confiado por más de 500+ salones de billar
+                  {t('hero.trust_indicator')}
                 </Typography>
               </Box>
             </Box>
@@ -216,7 +217,7 @@ export default function HeroSection() {
                     mb: 3,
                   }}
                 >
-                  Dashboard en Tiempo Real
+                  {t('hero.dashboard_title')}
                 </Typography>
                 </Box>
 
@@ -257,7 +258,7 @@ export default function HeroSection() {
                             fontSize: '0.875rem',
                           }}
                         >
-                          {feature.title}
+                          {t(feature.title)}
                         </Typography>
                         <Typography
                           variant="caption"
@@ -266,7 +267,7 @@ export default function HeroSection() {
                             fontSize: '0.75rem',
                           }}
                         >
-                          {feature.description}
+                          {t(feature.description)}
                         </Typography>
                       </Box>
                     </Box>

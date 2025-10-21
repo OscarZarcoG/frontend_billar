@@ -1,0 +1,221 @@
+{
+  "common": {
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "dashboard": "Panel de Control",
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirm": "Confirmar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "export": "Exportar",
+    "import": "Importar",
+    "settings": "Configuración",
+    "help": "Ayuda",
+    "support": "Soporte",
+    "contact": "Contacto",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "dashboard": "Panel de Control",
+    "tables": "Mesas",
+    "reservations": "Reservas",
+    "payments": "Pagos",
+    "reports": "Reportes",
+    "customers": "Clientes",
+    "inventory": "Inventario",
+    "settings": "Configuración",
+    "notifications": "Notificaciones"
+  },
+  "hero": {
+    "title_part1": "Gestiona tu Salón de",
+    "title_highlight": "Billar",
+    "title_part2": "como un Profesional",
+    "subtitle": "Sistema integral para la administración de mesas, reservas, consumos y análisis de tu negocio. Optimiza operaciones y maximiza ganancias.",
+    "cta_primary": "Comenzar Gratis",
+    "cta_secondary": "Ver Demo",
+    "trust_indicator": "Confiado por más de 500+ salones de billar",
+    "dashboard_title": "Dashboard en Tiempo Real",
+    "features": {
+      "table_management": {
+        "title": "Gestión de Mesas",
+        "description": "Control completo de todas las mesas de billar"
+      },
+      "smart_reservations": {
+        "title": "Reservas Inteligentes",
+        "description": "Sistema de reservas automatizado y eficiente"
+      },
+      "real_time_analytics": {
+        "title": "Análisis en Tiempo Real",
+        "description": "Reportes y estadísticas detalladas del negocio"
+      }
+    }
+  },
+  "features": {
+    "title": "La plataforma líder para la gestión integral de salones de billar",
+    "subtitle": "Optimiza tus operaciones, maximiza tus ganancias y brinda la mejor experiencia a tus clientes",
+    "cta_primary": "Comenzar Ahora",
+    "cta_secondary": "Ver Demo",
+    "watch_video": "Ver Video"
+  },
+  "footer": {
+    "description": "La plataforma líder para la gestión integral de salones de billar. Optimiza tus operaciones, maximiza tus ganancias y brinda la mejor experiencia a tus clientes.",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Recibe las últimas actualizaciones y consejos para tu negocio.",
+      "subscribe": "Suscribirse"
+    },
+    "follow_us": "Síguenos",
+    "sections": {
+      "product": "Producto",
+      "company": "Empresa",
+      "support": "Soporte",
+      "legal": "Legal"
+    },
+    "product_links": {
+      "table_management": "Gestión de Mesas",
+      "reservation_system": "Sistema de Reservas",
+      "inventory_control": "Control de Inventario",
+      "reports_analytics": "Reportes y Analytics",
+      "mobile_app": "App Móvil",
+      "integrations": "Integraciones"
+    },
+    "company_links": {
+      "about_us": "Acerca de Nosotros",
+      "our_team": "Nuestro Equipo",
+      "careers": "Carreras",
+      "press": "Prensa",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "support_links": {
+      "help_center": "Centro de Ayuda",
+      "documentation": "Documentación",
+      "tutorials": "Tutoriales",
+      "system_status": "Estado del Sistema",
+      "technical_support": "Soporte Técnico",
+      "community": "Comunidad"
+    },
+    "legal_links": {
+      "terms_of_service": "Términos de Servicio",
+      "privacy_policy": "Política de Privacidad",
+      "cookie_policy": "Política de Cookies",
+      "gdpr": "GDPR"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "subtitle": "Accede a tu cuenta",
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "remember_me": "Recordarme",
+      "forgot_password": "¿Olvidaste tu contraseña?",
+      "no_account": "¿No tienes cuenta?",
+      "sign_up": "Regístrate"
+    },
+    "register": {
+      "title": "Crear Cuenta",
+      "subtitle": "Únete a nuestra plataforma",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "confirm_password": "Confirmar Contraseña",
+      "phone": "Teléfono (Opcional)",
+      "additional_info": "Información Adicional",
+      "already_have_account": "¿Ya tienes cuenta?",
+      "sign_in": "Inicia Sesión",
+      "terms_agreement": "Acepto los términos y condiciones"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenido de vuelta",
+    "overview": "Resumen General",
+    "quick_actions": "Acciones Rápidas",
+    "new_reservation": "Nueva Reserva",
+    "process_payment": "Procesar Pago",
+    "view_reports": "Ver Reportes",
+    "manage_tables": "Gestionar Mesas",
+    "recent_activity": "Actividad Reciente",
+    "statistics": "Estadísticas",
+    "notifications": "Notificaciones",
+    "profile": "Perfil",
+    "role": {
+      "admin": "Administrador",
+      "manager": "Gerente",
+      "employee": "Empleado",
+      "client": "Cliente"
+    }
+  },
+  "tables": {
+    "title": "Gestión de Mesas",
+    "available": "Disponible",
+    "occupied": "Ocupada",
+    "reserved": "Reservada",
+    "maintenance": "Mantenimiento",
+    "table_number": "Mesa Número",
+    "status": "Estado",
+    "time_remaining": "Tiempo Restante",
+    "customer": "Cliente",
+    "actions": "Acciones"
+  },
+  "reservations": {
+    "title": "Reservas",
+    "new_reservation": "Nueva Reserva",
+    "customer_name": "Nombre del Cliente",
+    "table": "Mesa",
+    "date": "Fecha",
+    "time": "Hora",
+    "duration": "Duración",
+    "status": "Estado",
+    "confirmed": "Confirmada",
+    "pending": "Pendiente",
+    "cancelled": "Cancelada"
+  },
+  "payments": {
+    "title": "Pagos",
+    "amount": "Monto",
+    "method": "Método",
+    "date": "Fecha",
+    "status": "Estado",
+    "paid": "Pagado",
+    "pending": "Pendiente",
+    "refunded": "Reembolsado"
+  },
+  "reports": {
+    "title": "Reportes",
+    "daily": "Diario",
+    "weekly": "Semanal",
+    "monthly": "Mensual",
+    "revenue": "Ingresos",
+    "occupancy": "Ocupación",
+    "customers": "Clientes"
+  },
+  "errors": {
+    "generic": "Ha ocurrido un error",
+    "network": "Error de conexión",
+    "validation": "Error de validación",
+    "unauthorized": "No autorizado",
+    "not_found": "No encontrado",
+    "server_error": "Error del servidor"
+  },
+  "success": {
+    "saved": "Guardado exitosamente",
+    "deleted": "Eliminado exitosamente",
+    "updated": "Actualizado exitosamente",
+    "created": "Creado exitosamente"
+  }
+}
