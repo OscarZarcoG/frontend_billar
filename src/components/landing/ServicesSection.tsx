@@ -10,25 +10,22 @@ import {
   CardContent,
   Button,
   Stack,
-  Chip,
   Avatar,
-  IconButton,
 } from '@mui/material';
 import {
   CheckCircle,
-  ArrowForward,
   Star,
   PlayCircleOutline,
 } from '@mui/icons-material';
 import { mainServices, additionalFeatures } from 'constants/landing/services';
 import { testimonials } from 'constants/landing/testimonials';
-import { colors, gradientBackgrounds, getSectionPadding, getContainerMaxWidth } from 'utils/landing/styles';
+import { colors, getSectionPadding, getContainerMaxWidth } from 'utils/landing/styles';
 import { getCardHoverStyles } from 'utils/landing/animations';
 
 export default function ServicesSection() {
   return (
     <Box sx={{ ...getSectionPadding(), backgroundColor: colors.background }}>
-      <Container maxWidth={getContainerMaxWidth() as any }>
+      <Container maxWidth={getContainerMaxWidth() as 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false}>
         {/* Section Header */}
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography
@@ -316,7 +313,7 @@ export default function ServicesSection() {
                       fontStyle: 'italic',
                     }}
                   >
-                    "{testimonial.comment}"
+                    &quot;{testimonial.comment}&quot;
                   </Typography>
                 </Card>
               </Grid>

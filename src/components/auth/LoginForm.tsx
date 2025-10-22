@@ -60,8 +60,9 @@ export default function LoginForm({ onSuccess, onRegisterClick }: LoginFormProps
       // Store the authentication data
       authService.storeAuthData(response.token, response.user);
       onSuccess();
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Error al iniciar sesión');
+    } catch (err: unknown) {
+      const error = err as { response?: { data?: { message?: string } } };
+      setError(error.response?.data?.message || 'Error al iniciar sesión');
     } finally {
       setIsLoading(false);
     }

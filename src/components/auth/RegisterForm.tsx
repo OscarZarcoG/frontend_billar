@@ -2,8 +2,6 @@
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 import {
   Box,
   TextField,
@@ -25,35 +23,18 @@ import {
   Lock,
   Phone,
   Cake,
-  Apple,
 } from '@mui/icons-material';
-import { authService } from '../../services/auth';
+import { authService, RegisterData } from '../../services/auth';
 import Logotipo from '../ui/logotipo';
 
-const schema = yup.object({
-  username: yup
-    .string()
-    .required('El nombre de usuario es requerido')
-    .min(3, 'Mínimo 3 caracteres'),
-  first_name: yup.string().required('El nombre es requerido'),
-  last_name: yup.string().required('El apellido es requerido'),
-  email: yup
-    .string()
-    .email('Email inválido')
-    .required('El email es requerido'),
-  password: yup
-    .string()
-    .required('La contraseña es requerida')
-    .min(8, 'Mínimo 8 caracteres'),
-  password_confirm: yup
-    .string()
-    .required('Confirma tu contraseña')
-    .oneOf([yup.ref('password')], 'Las contraseñas no coinciden'),
-  phone: yup.string().optional(),
-  birthday: yup.string().optional(),
-  gender: yup.string().optional(),
-  role: yup.string().required('Selecciona un rol'),
-});
+interface ApiError {
+  response?: {
+    data?: {
+      message?: string;
+    };
+  };
+  message?: string;
+}
 
 interface RegisterFormData {
   username: string;
@@ -84,19 +65,20 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
     handleSubmit,
     formState: { errors },
   } = useForm<RegisterFormData>({
-    resolver: yupResolver(schema),
+    mode: 'onChange',
   });
 
   const onSubmit = async (data: RegisterFormData) => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await authService.register(data);
+      const response = await authService.register(data as RegisterData);
       // Store the authentication data
       authService.storeAuthData(response.token, response.user);
       onSuccess();
-    } catch (err: any) {
-      setError(err.response?.data?.message || 'Error al registrarse');
+    } catch (err: unknown) {
+      const error = err as ApiError;
+      setError(error.response?.data?.message || 'Error al registrarse');
     } finally {
       setIsLoading(false);
     }
@@ -453,9 +435,9 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                       },
                     }}
                   >
-                    <MenuItem value="M">Masculino</MenuItem>
-                    <MenuItem value="F">Femenino</MenuItem>
-                    <MenuItem value="O">Otro</MenuItem>
+                    <MenuItem value="male">Masculino</MenuItem>
+                    <MenuItem value="female">Femenino</MenuItem>
+                    <MenuItem value="other">Otro</MenuItem>
                   </TextField>
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6 }}>

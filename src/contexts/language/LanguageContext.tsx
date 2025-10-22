@@ -6,7 +6,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 export type Language = 'es' | 'en';
 
 export interface TranslationData {
-  [key: string]: any;
+  [key: string]: string | TranslationData;
 }
 
 export interface LanguageContextType {
@@ -46,10 +46,15 @@ const loadTranslations = async (language: Language): Promise<TranslationData> =>
   }
 };
 
-const getNestedTranslation = (obj: any, path: string): string | undefined => {
-  return path.split('.').reduce((current, key) => {
-    return current && current[key] !== undefined ? current[key] : undefined;
+const getNestedTranslation = (obj: TranslationData, path: string): string | undefined => {
+  const result = path.split('.').reduce<string | TranslationData | undefined>((current, key) => {
+    if (current && typeof current === 'object' && current[key] !== undefined) {
+      return current[key];
+    }
+    return undefined;
   }, obj);
+  
+  return typeof result === 'string' ? result : undefined;
 };
 
 interface LanguageProviderProps {

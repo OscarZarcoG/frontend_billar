@@ -26,9 +26,7 @@ import {
 } from '@mui/material';
 import {
   Logout,
-  Person,
   Dashboard as DashboardIcon,
-  SportsEsports,
   Schedule,
   Payment,
   Settings,
@@ -48,7 +46,7 @@ interface User {
   first_name: string;
   last_name: string;
   email: string;
-  role: string;
+  role?: string;
 }
 
 export default function Dashboard() {
@@ -380,7 +378,7 @@ export default function Dashboard() {
           {/* Stats Cards */}
           <Grid container spacing={3} sx={{ mb: 4 }}>
             {statsCards.map((stat, index) => (
-              <Grid item xs={12} sm={6} lg={3} key={index}>
+              <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }}>
                 <Card
                   elevation={0}
                   sx={{
@@ -456,7 +454,7 @@ export default function Dashboard() {
 
           {/* Recent Activity */}
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={8}>
+            <Grid size={{ xs: 12, md: 8 }}>
               <Card
                 elevation={0}
                 sx={{
@@ -525,7 +523,7 @@ export default function Dashboard() {
               </Card>
             </Grid>
 
-            <Grid item xs={12} lg={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Card
                 elevation={0}
                 sx={{

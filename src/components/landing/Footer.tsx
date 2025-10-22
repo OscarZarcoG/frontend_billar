@@ -12,14 +12,13 @@ import {
   Stack,
   Button,
 } from '@mui/material';
-import { Email, Phone, LocationOn, SportsEsports, Apple, Android, Security, Support, Business } from '@mui/icons-material';
+import { SportsEsports } from '@mui/icons-material';
 import {
   productLinks,
   companyLinks,
   supportLinks,
   legalLinks,
   socialLinks,
-  contactInfo
 } from 'constants/landing/footer';
 import { colors, getSectionPadding, getContainerMaxWidth } from 'utils/landing/styles';
 
@@ -33,7 +32,7 @@ export default function Footer() {
         ...getSectionPadding(),
       }}
     >
-      <Container maxWidth={getContainerMaxWidth() as any}>
+      <Container maxWidth={getContainerMaxWidth() as 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false}>
         {/* Main Footer Content */}
         <Grid container spacing={6} sx={{ mb: 6 }}>
           {/* Company Info */}

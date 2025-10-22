@@ -9,24 +9,18 @@ import {
   Stack,
   Grid,
   Card,
-  CardContent,
-  IconButton,
 } from '@mui/material';
 import {
-  SportsEsports,
   TableBar,
   Schedule,
   PlayArrow,
-  Apple,
   Star,
 } from '@mui/icons-material';
 import Logotipo from '../ui/logotipo';
 import { heroFeatures } from 'constants/landing/hero';
 import { gradientBackgrounds, getButtonStyles, getGlassEffect } from 'utils/landing/styles';
 import { floatAnimation, getFloatingElementStyles } from 'utils/landing/animations';
-import Image from 'next/image';
 import { ButtonsNav } from '../ui/Buttons-nav';
-import Dashboard from '../../app/dashboard/page';
 import { useTranslation } from '../../hooks/language/useTranslation';
 
 export default function HeroSection() {
