@@ -21,8 +21,11 @@ import {
   socialLinks,
 } from 'constants/landing/footer';
 import { colors, getSectionPadding, getContainerMaxWidth } from 'utils/landing/styles';
+import { useTranslation } from '../../hooks/language/useTranslation';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="footer"
@@ -73,9 +76,7 @@ export default function Footer() {
                   fontSize: '0.9375rem',
                 }}
               >
-                La plataforma líder para la gestión integral de salones de billar.
-                Optimiza tus operaciones, maximiza tus ganancias y brinda la mejor
-                experiencia a tus clientes.
+                {t('footer.description')}
               </Typography>
 
               {/* Contact Info */}
@@ -103,7 +104,7 @@ export default function Footer() {
                     fontSize: '1rem',
                   }}
                 >
-                  Producto
+                  {t('footer.sections.product')}
                 </Typography>
                 <Stack spacing={1.5}>
                   {productLinks.map((link) => (
@@ -119,7 +120,7 @@ export default function Footer() {
                         },
                       }}
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   ))}
                 </Stack>
@@ -135,7 +136,7 @@ export default function Footer() {
                     fontSize: '1rem',
                   }}
                 >
-                  Empresa
+                  {t('footer.sections.company')}
                 </Typography>
                 <Stack spacing={1.5}>
                   {companyLinks.map((link) => (
@@ -151,7 +152,7 @@ export default function Footer() {
                         },
                       }}
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   ))}
                 </Stack>
@@ -167,7 +168,7 @@ export default function Footer() {
                     fontSize: '1rem',
                   }}
                 >
-                  Soporte
+                  {t('footer.sections.support')}
                 </Typography>
                 <Stack spacing={1.5}>
                   {supportLinks.map((link) => (
@@ -183,7 +184,7 @@ export default function Footer() {
                         },
                       }}
                     >
-                      {link.label}
+                      {t(link.label)}
                     </Link>
                   ))}
                 </Stack>
@@ -199,7 +200,7 @@ export default function Footer() {
                     fontSize: '1rem',
                   }}
                 >
-                  Newsletter
+                  {t('footer.newsletter.title')}
                 </Typography>
                 <Typography
                   variant="body2"
@@ -210,7 +211,7 @@ export default function Footer() {
                     lineHeight: 1.5,
                   }}
                 >
-                  Recibe las últimas actualizaciones y consejos para tu negocio.
+                  {t('footer.newsletter.description')}
                 </Typography>
 
                 <Button
@@ -226,7 +227,7 @@ export default function Footer() {
                     },
                   }}
                 >
-                  Suscribirse
+                  {t('footer.newsletter.subscribe')}
                 </Button>
 
                 
@@ -272,7 +273,7 @@ export default function Footer() {
                     },
                   }}
                 >
-                  {link.label}
+                  {t(link.label)}
                 </Link>
               ))}
             </Stack>
@@ -287,7 +288,7 @@ export default function Footer() {
                 fontWeight: 600,
               }}
             >
-              Síguenos
+              {t('footer.follow_us')}
             </Typography>
             <Stack direction="row" spacing={1}>
               {socialLinks.map((social, index) => (

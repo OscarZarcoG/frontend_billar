@@ -3,6 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import LoginForm from '../../components/auth/LoginForm';
+import ProtectedRoute from '../../components/auth/ProtectedRoute';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -17,9 +18,11 @@ export default function LoginPage() {
   };
 
   return (
-    <LoginForm
-      onSuccess={handleLoginSuccess}
-      onRegisterClick={handleRegisterClick}
-    />
+    <ProtectedRoute requireAuth={false}>
+      <LoginForm
+        onSuccess={handleLoginSuccess}
+        onRegisterClick={handleRegisterClick}
+      />
+    </ProtectedRoute>
   );
 }

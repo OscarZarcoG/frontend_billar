@@ -22,6 +22,7 @@ import {
   Lock,
 } from '@mui/icons-material';
 import { authService } from '../../services/auth';
+import { useAuth } from '../../contexts/auth/AuthContext';
 import Logotipo from '../ui/logotipo';
 
 const schema = yup.object({
@@ -43,6 +44,7 @@ export default function LoginForm({ onSuccess, onRegisterClick }: LoginFormProps
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const { login } = useAuth();
 
   const {
     register,
@@ -57,8 +59,8 @@ export default function LoginForm({ onSuccess, onRegisterClick }: LoginFormProps
       setIsLoading(true);
       setError(null);
       const response = await authService.login(data);
-      // Store the authentication data
-      authService.storeAuthData(response.token, response.user);
+      // Use the login function from AuthContext
+      login(response.token, response.user);
       onSuccess();
     } catch (err: unknown) {
       const error = err as { response?: { data?: { message?: string } } };
