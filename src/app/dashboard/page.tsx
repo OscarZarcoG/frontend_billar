@@ -6,37 +6,23 @@ import {
   Box,
   Typography,
   Button,
-  Avatar,
   Card,
   CardContent,
   Grid,
   Stack,
-  Chip,
-  IconButton,
-  AppBar,
-  Toolbar,
   Container,
-  Paper,
-  Divider,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  ListItemButton,
 } from '@mui/material';
 import {
-  Logout,
   Dashboard as DashboardIcon,
   Schedule,
   Payment,
-  Settings,
-  Notifications,
   TrendingUp,
-  Groups,
   TableBar,
   AccessTime,
-  Apple,
-  ChevronRight,
 } from '@mui/icons-material';
 import { authService } from '../../services/auth';
 import ProtectedRoute from '../../components/auth/ProtectedRoute';
@@ -76,14 +62,6 @@ export default function Dashboard() {
     checkAuth();
   }, [router]);
 
-  const handleLogout = async () => {
-    try {
-      await authService.logout();
-      router.push('/login');
-    } catch (error) {
-      console.error('Error logging out:', error);
-    }
-  };
 
   if (loading) {
     return (
@@ -106,16 +84,6 @@ export default function Dashboard() {
   if (!user) {
     return null;
   }
-
-  const menuItems = [
-    { icon: <DashboardIcon />, label: 'Dashboard', active: true },
-    { icon: <TableBar />, label: 'Mesas de Billar', count: 8 },
-    { icon: <Schedule />, label: 'Reservas', count: 12 },
-    { icon: <Groups />, label: 'Clientes', count: 45 },
-    { icon: <Payment />, label: 'Pagos', count: 3 },
-    { icon: <TrendingUp />, label: 'Reportes' },
-    { icon: <Settings />, label: 'Configuración' },
-  ];
 
   const statsCards = [
     {
