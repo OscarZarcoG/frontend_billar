@@ -17,7 +17,6 @@ import {
   ListItemText,
 } from '@mui/material';
 import {
-  Dashboard as DashboardIcon,
   Schedule,
   Payment,
   TrendingUp,

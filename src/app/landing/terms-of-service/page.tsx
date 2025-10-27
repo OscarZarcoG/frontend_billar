@@ -74,7 +74,7 @@ export default function TermsOfServicePage() {
               1. Aceptación de los Términos
             </Typography>
             <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Al acceder y utilizar PoolZapp ("el Servicio"), usted acepta estar sujeto a estos Términos de Servicio ("Términos"). Si no está de acuerdo con alguna parte de estos términos, no podrá acceder al Servicio.
+              Al acceder y utilizar PoolZapp (&ldquo;el Servicio&rdquo;), usted acepta estar sujeto a estos Términos de Servicio (&ldquo;Términos&rdquo;). Si no está de acuerdo con alguna parte de estos términos, no podrá acceder al Servicio.
             </Typography>
           </Box>
 

@@ -378,7 +378,7 @@ export default function PrivacyPolicyPage() {
               10. Cambios a esta Política
             </Typography>
             <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de "última actualización".
+              Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de &ldquo;última actualización&rdquo;.
             </Typography>
           </Box>
 
