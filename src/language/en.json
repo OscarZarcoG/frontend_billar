@@ -70,51 +70,6 @@
     "cta_secondary": "Watch Demo",
     "watch_video": "Watch Video"
   },
-  "footer": {
-    "description": "The leading platform for comprehensive billiard hall management. Optimize your operations, maximize your profits and provide the best experience to your customers.",
-    "newsletter": {
-      "title": "Newsletter",
-      "description": "Get the latest updates and tips for your business.",
-      "subscribe": "Subscribe"
-    },
-    "follow_us": "Follow Us",
-    "sections": {
-      "product": "Product",
-      "company": "Company",
-      "support": "Support",
-      "legal": "Legal"
-    },
-    "product_links": {
-      "table_management": "Table Management",
-      "reservation_system": "Reservation System",
-      "inventory_control": "Inventory Control",
-      "reports_analytics": "Reports & Analytics",
-      "mobile_app": "Mobile App",
-      "integrations": "Integrations"
-    },
-    "company_links": {
-      "about_us": "About Us",
-      "our_team": "Our Team",
-      "careers": "Careers",
-      "press": "Press",
-      "blog": "Blog",
-      "contact": "Contact"
-    },
-    "support_links": {
-      "help_center": "Help Center",
-      "documentation": "Documentation",
-      "tutorials": "Tutorials",
-      "system_status": "System Status",
-      "technical_support": "Technical Support",
-      "community": "Community"
-    },
-    "legal_links": {
-      "terms_of_service": "Terms of Service",
-      "privacy_policy": "Privacy Policy",
-      "cookie_policy": "Cookie Policy",
-      "gdpr": "GDPR"
-    }
-  },
   "auth": {
     "login": {
       "title": "Sign In",
@@ -203,6 +158,63 @@
     "revenue": "Revenue",
     "occupancy": "Occupancy",
     "customers": "Customers"
+  },
+  "services": {
+    "title": "Everything you need to",
+    "title_highlight": "manage your pool hall",
+    "subtitle": "A comprehensive platform that simplifies daily operations and maximizes the profitability of your pool business.",
+    "additional_features_title": "Additional Features",
+    "testimonials_title": "What our customers say",
+    "cta_title": "Ready to transform your business?",
+    "cta_subtitle": "Join hundreds of pool halls that have already optimized their operations",
+    "cta_primary": "Start Free Trial",
+    "cta_secondary": "Request Demo"
+  },
+  "footer": {
+    "description": "The comprehensive platform for modern pool hall management. Optimize operations, maximize profits and provide the best experience to your customers.",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Get the latest updates and tips for your business.",
+      "subscribe": "Subscribe"
+    },
+    "follow_us": "Follow Us",
+    "sections": {
+      "product": "Product",
+      "company": "Company",
+      "support": "Support",
+      "legal": "Legal"
+    },
+    "product_links": {
+      "table_management": "Table Management",
+      "reservation_system": "Reservation System",
+      "inventory_control": "Inventory Control",
+      "reports_analytics": "Reports & Analytics",
+      "mobile_app": "Mobile App",
+      "integrations": "Integrations"
+    },
+    "company_links": {
+      "about_us": "About Us",
+      "our_team": "Our Team",
+      "careers": "Careers",
+      "press": "Press",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "support_links": {
+      "help_center": "Help Center",
+      "documentation": "Documentation",
+      "tutorials": "Tutorials",
+      "system_status": "System Status",
+      "technical_support": "Technical Support",
+      "community": "Community"
+    },
+    "legal_links": {
+      "terms_of_service": "Terms of Service",
+      "privacy_policy": "Privacy Policy",
+      "cookie_policy": "Cookie Policy",
+      "gdpr": "GDPR"
+    },
+    "copyright": "© 2024 PoolZapp. All rights reserved."
   },
   "errors": {
     "generic": "An error occurred",

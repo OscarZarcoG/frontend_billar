@@ -204,6 +204,17 @@
     "occupancy": "Ocupación",
     "customers": "Clientes"
   },
+  "services": {
+    "title": "Todo lo que necesitas para",
+    "title_highlight": "gestionar tu salón",
+    "subtitle": "Una plataforma integral que simplifica la operación diaria y maximiza la rentabilidad de tu negocio de billar.",
+    "additional_features_title": "Características Adicionales",
+    "testimonials_title": "Lo que dicen nuestros clientes",
+    "cta_title": "¿Listo para transformar tu negocio?",
+    "cta_subtitle": "Únete a cientos de salones que ya optimizaron sus operaciones",
+    "cta_primary": "Comenzar Prueba Gratuita",
+    "cta_secondary": "Solicitar Demo"
+  },
   "errors": {
     "generic": "Ha ocurrido un error",
     "network": "Error de conexión",

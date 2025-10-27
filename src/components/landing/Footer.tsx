@@ -256,7 +256,7 @@ export default function Footer() {
                 mb: 2,
               }}
             >
-              © 2024 PoolZapp. Todos los derechos reservados.
+              {t('footer.copyright')}
             </Typography>
             <Stack direction="row" spacing={3} flexWrap="wrap">
               {legalLinks.map((link, index) => (

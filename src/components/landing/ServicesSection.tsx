@@ -21,8 +21,10 @@ import { mainServices, additionalFeatures } from 'constants/landing/services';
 import { testimonials } from 'constants/landing/testimonials';
 import { colors, getSectionPadding, getContainerMaxWidth } from 'utils/landing/styles';
 import { getCardHoverStyles } from 'utils/landing/animations';
+import { useTranslation } from '../../hooks/language/useTranslation';
 
 export default function ServicesSection() {
+  const { t } = useTranslation();
   return (
     <Box sx={{ ...getSectionPadding(), backgroundColor: colors.background }}>
       <Container maxWidth={getContainerMaxWidth() as 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false}>
@@ -38,7 +40,7 @@ export default function ServicesSection() {
               mb: 3,
             }}
           >
-            Todo lo que necesitas para{' '}
+            {t('services.title')}{' '}
             <Box
               component="span"
               sx={{
@@ -48,7 +50,7 @@ export default function ServicesSection() {
                 backgroundClip: 'text',
               }}
             >
-              gestionar tu salón
+              {t('services.title_highlight')}
             </Box>
           </Typography>
           <Typography
@@ -62,8 +64,7 @@ export default function ServicesSection() {
               lineHeight: 1.6,
             }}
           >
-            Una plataforma integral que simplifica la operación diaria y maximiza 
-            la rentabilidad de tu negocio de billar.
+            {t('services.subtitle')}
           </Typography>
         </Box>
 
@@ -177,7 +178,7 @@ export default function ServicesSection() {
               fontSize: { xs: '1.75rem', md: '2rem' },
             }}
           >
-            Características Adicionales
+            {t('services.additional_features_title')}
           </Typography>
           <Grid container spacing={3}>
             {additionalFeatures.map((feature, index) => (
@@ -248,7 +249,7 @@ export default function ServicesSection() {
               fontSize: { xs: '1.75rem', md: '2rem' },
             }}
           >
-            Lo que dicen nuestros clientes
+            {t('services.testimonials_title')}
           </Typography>
           <Grid container spacing={4}>
             {testimonials.map((testimonial, index) => (
@@ -340,7 +341,7 @@ export default function ServicesSection() {
               fontSize: { xs: '1.75rem', md: '2rem' },
             }}
           >
-            ¿Listo para transformar tu negocio?
+            {t('services.cta_title')}
           </Typography>
           <Typography
             variant="h6"
@@ -351,7 +352,7 @@ export default function ServicesSection() {
               fontSize: '1.125rem',
             }}
           >
-            Únete a cientos de salones que ya optimizaron sus operaciones
+            {t('services.cta_subtitle')}
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -376,7 +377,7 @@ export default function ServicesSection() {
                 },
               }}
             >
-              Comenzar Prueba Gratuita
+              {t('services.cta_primary')}
             </Button>
             <Button
               variant="outlined"
@@ -396,7 +397,7 @@ export default function ServicesSection() {
                 },
               }}
             >
-              Solicitar Demo
+              {t('services.cta_secondary')}
             </Button>
           </Stack>
         </Box>
