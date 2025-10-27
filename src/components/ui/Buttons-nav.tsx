@@ -9,7 +9,7 @@ export const ButtonsNav = () => {
     
     return (
         <Stack direction="row" spacing={2} alignItems="center">
-            <LanguageSelector variant="compact" />
+            {/* <LanguageSelector variant="compact" /> */}
             
             <Button 
                 variant="outlined" 
