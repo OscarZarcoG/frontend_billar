@@ -21,13 +21,12 @@ import {
 import { useTranslation } from '../../hooks/language/useTranslation';
 import type { Language } from '../../contexts/language/LanguageContext';
 
-// Configuración de idiomas con iconos y información
 const languageConfig = {
   es: {
     code: 'es',
     name: 'Español',
     nativeName: 'Español',
-    flag: '🇪🇸',
+    flag: '🇲🇽',
     shortCode: 'ES',
   },
   en: {
@@ -74,7 +73,6 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   const currentLanguageConfig = languageConfig[language];
   const availableLanguages = getAvailableLanguages();
 
-  // Estilos base siguiendo el diseño Apple
   const baseButtonStyles = {
     borderRadius: 2,
     textTransform: 'none' as const,
@@ -86,7 +84,6 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
     },
   };
 
-  // Renderizado según la variante
   const renderTrigger = () => {
     switch (variant) {
       case 'icon':

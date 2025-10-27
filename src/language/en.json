@@ -173,22 +173,42 @@
       "table_management": {
         "title": "Table Management",
         "description": "Complete control of all pool table status in real time",
-        "features": ["Real-time status", "Automatic reservations", "Usage history", "Customizable rates"]
+        "features": {
+          "0": "Real-time status",
+          "1": "Automatic reservations",
+          "2": "Usage history",
+          "3": "Customizable rates"
+        }
       },
       "food_management": {
         "title": "Food Management",
         "description": "Complete system for managing food and snack orders",
-        "features": ["Digital menu", "Table orders", "Inventory control", "Sales reports"]
+        "features": {
+          "0": "Digital menu",
+          "1": "Table orders",
+          "2": "Inventory control",
+          "3": "Sales reports"
+        }
       },
       "drinks_management": {
         "title": "Beverage Management",
         "description": "Inventory control and sales of alcoholic and non-alcoholic beverages",
-        "features": ["Automatic inventory", "Stock control", "Dynamic pricing", "Promotions"]
+        "features": {
+          "0": "Automatic inventory",
+          "1": "Stock control",
+          "2": "Dynamic pricing",
+          "3": "Promotions"
+        }
       },
       "analytics": {
         "title": "Analytics & Reports",
         "description": "Detailed reports and business performance analysis",
-        "features": ["Live dashboard", "Automatic reports", "Key metrics", "Export data"]
+        "features": {
+          "0": "Live dashboard",
+          "1": "Automatic reports",
+          "2": "Key metrics",
+          "3": "Export data"
+        }
       }
     },
     "additional_features": {

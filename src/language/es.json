@@ -218,22 +218,42 @@
       "table_management": {
         "title": "Gestión de Mesas",
         "description": "Control completo del estado de todas las mesas de billar en tiempo real",
-        "features": ["Estado en tiempo real", "Reservas automáticas", "Historial de uso", "Tarifas personalizables"]
+        "features": {
+          "0": "Estado en tiempo real",
+          "1": "Reservas automáticas",
+          "2": "Historial de uso",
+          "3": "Tarifas personalizables"
+        }
       },
       "food_management": {
         "title": "Gestión de Alimentos",
         "description": "Sistema completo para el manejo de pedidos de comida y snacks",
-        "features": ["Menú digital", "Pedidos por mesa", "Control de inventario", "Reportes de ventas"]
+        "features": {
+          "0": "Menú digital",
+          "1": "Pedidos por mesa",
+          "2": "Control de inventario",
+          "3": "Reportes de ventas"
+        }
       },
       "drinks_management": {
         "title": "Gestión de Bebidas",
         "description": "Control de inventario y ventas de bebidas alcohólicas y no alcohólicas",
-        "features": ["Inventario automático", "Control de stock", "Precios dinámicos", "Promociones"]
+        "features": {
+          "0": "Inventario automático",
+          "1": "Control de stock",
+          "2": "Precios dinámicos",
+          "3": "Promociones"
+        }
       },
       "analytics": {
         "title": "Análisis y Reportes",
         "description": "Reportes detallados y análisis de rendimiento del negocio",
-        "features": ["Dashboard en vivo", "Reportes automáticos", "Métricas clave", "Exportar datos"]
+        "features": {
+          "0": "Dashboard en vivo",
+          "1": "Reportes automáticos",
+          "2": "Métricas clave",
+          "3": "Exportar datos"
+        }
       }
     },
     "additional_features": {

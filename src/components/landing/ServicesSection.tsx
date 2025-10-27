@@ -26,7 +26,6 @@ import { useTranslation } from '../../hooks/language/useTranslation';
 export default function ServicesSection() {
   const { t } = useTranslation();
   
-  // Get translated data
   const mainServices = getMainServices(t);
   const additionalFeatures = getAdditionalFeatures(t);
   const testimonials = getTestimonials(t);
@@ -34,7 +33,6 @@ export default function ServicesSection() {
   return (
     <Box sx={{ ...getSectionPadding(), backgroundColor: colors.background }}>
       <Container maxWidth={getContainerMaxWidth() as 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false}>
-        {/* Section Header */}
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography
             variant="h2"
@@ -74,7 +72,6 @@ export default function ServicesSection() {
           </Typography>
         </Box>
 
-        {/* Main Services Grid */}
         <Grid container spacing={4} sx={{ mb: 8 }}>
           {mainServices.map((service, index) => (
             <Grid key={`service-${index}`} size={{ xs: 12, lg: 6 }}>
