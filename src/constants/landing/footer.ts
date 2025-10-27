@@ -34,10 +34,10 @@ export const supportLinks = [
 ];
 
 export const legalLinks = [
-  { label: 'footer.legal_links.terms_of_service', href: '/terms-of-service' },
-  { label: 'footer.legal_links.privacy_policy', href: '/privacy-policy' },
-  { label: 'footer.legal_links.cookie_policy', href: '/cookie-policy' },
-  { label: 'footer.legal_links.gdpr', href: '/gdpr' },
+  { label: 'footer.legal_links.terms_of_service', href: '/landing/terms-of-service' },
+  { label: 'footer.legal_links.privacy_policy', href: '/landing/privacy-policy' },
+  { label: 'footer.legal_links.cookie_policy', href: '/landing/cookie-policy' },
+  { label: 'footer.legal_links.gdpr', href: '/landing/gdpr' },
 ];
 
 export const socialLinks = [

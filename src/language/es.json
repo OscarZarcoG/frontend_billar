@@ -213,7 +213,64 @@
     "cta_title": "¿Listo para transformar tu negocio?",
     "cta_subtitle": "Únete a cientos de salones que ya optimizaron sus operaciones",
     "cta_primary": "Comenzar Prueba Gratuita",
-    "cta_secondary": "Solicitar Demo"
+    "cta_secondary": "Solicitar Demo",
+    "main_services": {
+      "table_management": {
+        "title": "Gestión de Mesas",
+        "description": "Control completo del estado de todas las mesas de billar en tiempo real",
+        "features": ["Estado en tiempo real", "Reservas automáticas", "Historial de uso", "Tarifas personalizables"]
+      },
+      "food_management": {
+        "title": "Gestión de Alimentos",
+        "description": "Sistema completo para el manejo de pedidos de comida y snacks",
+        "features": ["Menú digital", "Pedidos por mesa", "Control de inventario", "Reportes de ventas"]
+      },
+      "drinks_management": {
+        "title": "Gestión de Bebidas",
+        "description": "Control de inventario y ventas de bebidas alcohólicas y no alcohólicas",
+        "features": ["Inventario automático", "Control de stock", "Precios dinámicos", "Promociones"]
+      },
+      "analytics": {
+        "title": "Análisis y Reportes",
+        "description": "Reportes detallados y análisis de rendimiento del negocio",
+        "features": ["Dashboard en vivo", "Reportes automáticos", "Métricas clave", "Exportar datos"]
+      }
+    },
+    "additional_features": {
+      "smart_reservations": {
+        "title": "Reservas Inteligentes",
+        "description": "Sistema automatizado de reservas"
+      },
+      "multiple_payments": {
+        "title": "Múltiples Formas de Pago",
+        "description": "Acepta efectivo, tarjetas y pagos digitales"
+      },
+      "customer_management": {
+        "title": "Gestión de Clientes",
+        "description": "Base de datos de clientes con historial y preferencias"
+      },
+      "revenue_optimization": {
+        "title": "Optimización de Ingresos",
+        "description": "Algoritmos para maximizar la ocupación y ganancias"
+      }
+    },
+    "testimonials": {
+      "carlos_mendoza": {
+        "name": "Carlos Mendoza",
+        "business": "Billar Club Premium",
+        "comment": "Increíble sistema. Nuestras ventas aumentaron 40% en el primer mes."
+      },
+      "ana_garcia": {
+        "name": "Ana García",
+        "business": "Pool House Central",
+        "comment": "La gestión de mesas nunca fue tan fácil. Altamente recomendado."
+      },
+      "roberto_silva": {
+        "name": "Roberto Silva",
+        "business": "Billar & Más",
+        "comment": "El sistema de reportes nos ayudó a optimizar completamente el negocio."
+      }
+    }
   },
   "errors": {
     "generic": "Ha ocurrido un error",

@@ -168,7 +168,64 @@
     "cta_title": "Ready to transform your business?",
     "cta_subtitle": "Join hundreds of pool halls that have already optimized their operations",
     "cta_primary": "Start Free Trial",
-    "cta_secondary": "Request Demo"
+    "cta_secondary": "Request Demo",
+    "main_services": {
+      "table_management": {
+        "title": "Table Management",
+        "description": "Complete control of all pool table status in real time",
+        "features": ["Real-time status", "Automatic reservations", "Usage history", "Customizable rates"]
+      },
+      "food_management": {
+        "title": "Food Management",
+        "description": "Complete system for managing food and snack orders",
+        "features": ["Digital menu", "Table orders", "Inventory control", "Sales reports"]
+      },
+      "drinks_management": {
+        "title": "Beverage Management",
+        "description": "Inventory control and sales of alcoholic and non-alcoholic beverages",
+        "features": ["Automatic inventory", "Stock control", "Dynamic pricing", "Promotions"]
+      },
+      "analytics": {
+        "title": "Analytics & Reports",
+        "description": "Detailed reports and business performance analysis",
+        "features": ["Live dashboard", "Automatic reports", "Key metrics", "Export data"]
+      }
+    },
+    "additional_features": {
+      "smart_reservations": {
+        "title": "Smart Reservations",
+        "description": "Automated reservation system"
+      },
+      "multiple_payments": {
+        "title": "Multiple Payment Methods",
+        "description": "Accept cash, cards and digital payments"
+      },
+      "customer_management": {
+        "title": "Customer Management",
+        "description": "Customer database with history and preferences"
+      },
+      "revenue_optimization": {
+        "title": "Revenue Optimization",
+        "description": "Algorithms to maximize occupancy and profits"
+      }
+    },
+    "testimonials": {
+      "carlos_mendoza": {
+        "name": "Carlos Mendoza",
+        "business": "Premium Billiards Club",
+        "comment": "Amazing system. Our sales increased 40% in the first month."
+      },
+      "ana_garcia": {
+        "name": "Ana García",
+        "business": "Central Pool House",
+        "comment": "Table management has never been so easy. Highly recommended."
+      },
+      "roberto_silva": {
+        "name": "Roberto Silva",
+        "business": "Billiards & More",
+        "comment": "The reporting system helped us completely optimize the business."
+      }
+    }
   },
   "footer": {
     "description": "The comprehensive platform for modern pool hall management. Optimize operations, maximize profits and provide the best experience to your customers.",

@@ -17,14 +17,20 @@ import {
   Star,
   PlayCircleOutline,
 } from '@mui/icons-material';
-import { mainServices, additionalFeatures } from 'constants/landing/services';
-import { testimonials } from 'constants/landing/testimonials';
+import { getMainServices, getAdditionalFeatures } from 'constants/landing/services';
+import { getTestimonials } from 'constants/landing/testimonials';
 import { colors, getSectionPadding, getContainerMaxWidth } from 'utils/landing/styles';
 import { getCardHoverStyles } from 'utils/landing/animations';
 import { useTranslation } from '../../hooks/language/useTranslation';
 
 export default function ServicesSection() {
   const { t } = useTranslation();
+  
+  // Get translated data
+  const mainServices = getMainServices(t);
+  const additionalFeatures = getAdditionalFeatures(t);
+  const testimonials = getTestimonials(t);
+  
   return (
     <Box sx={{ ...getSectionPadding(), backgroundColor: colors.background }}>
       <Container maxWidth={getContainerMaxWidth() as 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false}>

@@ -36,9 +36,7 @@ export default function Footer() {
       }}
     >
       <Container maxWidth={getContainerMaxWidth() as 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false}>
-        {/* Main Footer Content */}
         <Grid container spacing={6} sx={{ mb: 6 }}>
-          {/* Company Info */}
           <Grid size={{ xs: 12, lg: 6 }}>
             <Box sx={{ mb: 4 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
@@ -79,7 +77,6 @@ export default function Footer() {
                 {t('footer.description')}
               </Typography>
 
-              {/* Contact Info */}
               <Stack spacing={2}>
                 <Box component="div" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                   <Typography
