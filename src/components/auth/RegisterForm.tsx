@@ -66,13 +66,22 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
     formState: { errors },
   } = useForm<RegisterFormData>({
     mode: 'onChange',
+    defaultValues: {
+      gender: '',
+    },
   });
 
   const onSubmit = async (data: RegisterFormData) => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await authService.register(data as RegisterData);
+      // Sanitizar payload: no enviar rol (por defecto es 'client' en backend) ni género vacío
+      const payload: any = { ...data };
+      if (!payload.gender) delete payload.gender;
+      delete payload.role;
+      if (!payload.phone) delete payload.phone;
+
+      const response = await authService.register(payload as RegisterData);
       // Store the authentication data
       authService.storeAuthData(response.token, response.user);
       onSuccess();
@@ -419,11 +428,12 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
               </Grid>
 
               <Grid container spacing={2}>
-                <Grid size={{ xs: 12, sm: 6 }}>
+                <Grid size={{ xs: 12, sm: 12 }}>
                   <TextField
                     {...register('gender')}
                     label="Género"
                     select
+                    defaultValue=""
                     variant="outlined"
                     fullWidth
                     error={!!errors.gender}
@@ -435,30 +445,10 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
                       },
                     }}
                   >
+                    <MenuItem value="">Selecciona género</MenuItem>
                     <MenuItem value="male">Masculino</MenuItem>
                     <MenuItem value="female">Femenino</MenuItem>
                     <MenuItem value="other">Otro</MenuItem>
-                  </TextField>
-                </Grid>
-                <Grid size={{ xs: 12, sm: 6 }}>
-                  <TextField
-                    {...register('role')}
-                    label="Rol"
-                    select
-                    variant="outlined"
-                    fullWidth
-                    error={!!errors.role}
-                    helperText={errors.role?.message}
-                    sx={{
-                      '& .MuiOutlinedInput-root': {
-                        height: 56,
-                        fontSize: '1.0625rem',
-                      },
-                    }}
-                  >
-                    <MenuItem value="cliente">Cliente</MenuItem>
-                    <MenuItem value="empleado">Empleado</MenuItem>
-                    <MenuItem value="administrador">Administrador</MenuItem>
                   </TextField>
                 </Grid>
               </Grid>
