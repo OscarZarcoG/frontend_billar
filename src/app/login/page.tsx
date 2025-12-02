@@ -9,7 +9,6 @@ export default function LoginPage() {
   const router = useRouter();
 
   const handleLoginSuccess = () => {
-    // Redirect to dashboard or home page after successful login
     router.push('/dashboard');
   };
 

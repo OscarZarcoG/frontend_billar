@@ -29,13 +29,32 @@ export const useLanguage = () => {
 
 const loadTranslations = async (language: Language): Promise<TranslationData> => {
   try {
-    const translations = await import(`../../language/${language}.json`);
+    const translations = await import(`../../constants/language/landing/${language}.json`);
     return translations.default || translations;
   } catch (error) {
     console.error(`Error loading translations for ${language}:`, error);
     if (language !== 'es') {
       try {
-        const fallbackTranslations = await import('../../language/es.json');
+        const fallbackTranslations = await import('../../constants/language/landing/es.json');
+        return fallbackTranslations.default || fallbackTranslations;
+      } catch (fallbackError) {
+        console.error('Error loading fallback translations:', fallbackError);
+        return {};
+      }
+    }
+    return {};
+  }
+};
+
+const loadLandingPageTranslations = async (language: Language): Promise<TranslationData> => {
+  try {
+    const translations = await import(`../../constants/language/landing/${language}.json`);
+    return translations.default || translations;
+  } catch (error) {
+    console.error(`Error loading translations for ${language}:`, error);
+    if (language !== 'es') {
+      try {
+        const fallbackTranslations = await import('../../constants/language/landing/es.json');
         return fallbackTranslations.default || fallbackTranslations;
       } catch (fallbackError) {
         console.error('Error loading fallback translations:', fallbackError);
@@ -53,7 +72,7 @@ const getNestedTranslation = (obj: TranslationData, path: string): string | unde
     }
     return undefined;
   }, obj);
-  
+
   return typeof result === 'string' ? result : undefined;
 };
 
@@ -62,9 +81,9 @@ interface LanguageProviderProps {
   defaultLanguage?: Language;
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
-  children, 
-  defaultLanguage = 'es' 
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({
+  children,
+  defaultLanguage = 'es'
 }) => {
   const [language, setLanguageState] = useState<Language>(defaultLanguage);
   const [translations, setTranslations] = useState<TranslationData>({});
@@ -79,11 +98,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
   const t = (key: string, fallback?: string): string => {
     const translation = getNestedTranslation(translations, key);
-    
+
     if (translation !== undefined) {
       return typeof translation === 'string' ? translation : String(translation);
     }
-    
+
     return fallback || key;
   };
 
@@ -107,7 +126,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     const loadLanguageData = async () => {
       setIsLoading(true);
       try {
-        const translationData = await loadTranslations(language);
+        const translationData = await loadLandingPageTranslations(language);
         setTranslations(translationData);
       } catch (error) {
         console.error('Error loading language data:', error);
@@ -121,7 +140,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
   if (isLoading) {
     return (
-      <SkeletonLoader variant="full" count={3} />
+      <SkeletonLoader variant="full" /> /* count = cantidad de cards, count={6} */
     );
   }
 

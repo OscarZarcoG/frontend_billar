@@ -9,9 +9,9 @@ import { useLandingLoader } from 'hooks/landing/useLandingLoader';
 export default function LandingPage() {
   const { isLoading } = useLandingLoader({ loadingDelay: 100 });
 
-  if (isLoading) {
+  /* if (isLoading) {
     return <SkeletonLoader variant="full" count={3} />;
-  }
+  } */
 
   return (
     <Box

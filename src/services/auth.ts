@@ -40,6 +40,15 @@ export const authService = {
     return response.data;
   },
 
+  async loginWithGoogle(data: LoginData): Promise<AuthResponse> {
+    const response = await api.post('api/auth/login-with-google/', data);
+    return response.data;
+  },
+  async loginWithGithub(data: LoginData): Promise<AuthResponse> {
+    const response = await api.post('api/auth/login-with-github/', data);
+    return response.data;
+  },
+
   async register(data: RegisterData): Promise<AuthResponse> {
     const response = await api.post('api/auth/register/', data);
     return response.data;
