@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import React, { useState, useEffect, useRef, ReactNode, useCallback } from 'react';
 import { Box, IconButton, SxProps, Theme } from '@mui/material';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
@@ -41,9 +41,9 @@ export const AutoCarousel: React.FC<AutoCarouselProps> = ({
         setTimeout(() => setIsTransitioning(false), transitionDuration);
     };
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         goToSlide((currentIndex + 1) % itemCount);
-    };
+    }, [currentIndex, itemCount, goToSlide]);
 
     const goToPrevious = () => {
         goToSlide((currentIndex - 1 + itemCount) % itemCount);
@@ -59,7 +59,7 @@ export const AutoCarousel: React.FC<AutoCarouselProps> = ({
                 clearTimeout(timeoutRef.current);
             }
         };
-    }, [currentIndex, isPaused, autoPlayInterval]);
+    }, [currentIndex, isPaused, autoPlayInterval, goToNext]);
 
     const handleMouseEnter = () => {
         if (pauseOnHover) {

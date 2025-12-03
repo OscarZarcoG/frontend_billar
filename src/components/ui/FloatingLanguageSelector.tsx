@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Fab, Zoom } from '@mui/material';
+import { Box, Zoom } from '@mui/material';
 import { LanguageSelector } from './LanguageSelector';
 
 interface FloatingLanguageSelectorProps {

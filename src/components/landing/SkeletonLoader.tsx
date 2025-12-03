@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Box, Skeleton, Stack, Grid, Card, CardContent, Divider } from '@mui/material';
-import { colors, getSectionPadding, getContainerMaxWidth } from 'utils/landing/styles';
+import { colors, getContainerMaxWidth } from 'utils/landing/styles';
 
 interface SkeletonLoaderProps {
   variant?: 'hero' | 'card' | 'list' | 'form' | 'footer' | 'full';

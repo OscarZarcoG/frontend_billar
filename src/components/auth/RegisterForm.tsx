@@ -75,13 +75,19 @@ export default function RegisterForm({ onSuccess, onLoginClick }: RegisterFormPr
     try {
       setIsLoading(true);
       setError(null);
-      // Sanitizar payload: no enviar rol (por defecto es 'client' en backend) ni género vacío
-      const payload: any = { ...data };
-      if (!payload.gender) delete payload.gender;
-      delete payload.role;
-      if (!payload.phone) delete payload.phone;
+      const { gender, phone, username, first_name, last_name, email, password, password_confirm } = data;
+      const payload: RegisterData = {
+        username,
+        first_name,
+        last_name,
+        email,
+        password,
+        password_confirm,
+        phone: phone ?? '',
+        ...(gender ? { gender: gender as RegisterData['gender'] } : {}),
+      };
 
-      const response = await authService.register(payload as RegisterData);
+      const response = await authService.register(payload);
       // Store the authentication data
       authService.storeAuthData(response.token, response.user);
       onSuccess();

@@ -27,24 +27,6 @@ export const useLanguage = () => {
   return context;
 };
 
-const loadTranslations = async (language: Language): Promise<TranslationData> => {
-  try {
-    const translations = await import(`../../constants/language/landing/${language}.json`);
-    return translations.default || translations;
-  } catch (error) {
-    console.error(`Error loading translations for ${language}:`, error);
-    if (language !== 'es') {
-      try {
-        const fallbackTranslations = await import('../../constants/language/landing/es.json');
-        return fallbackTranslations.default || fallbackTranslations;
-      } catch (fallbackError) {
-        console.error('Error loading fallback translations:', fallbackError);
-        return {};
-      }
-    }
-    return {};
-  }
-};
 
 const loadLandingPageTranslations = async (language: Language): Promise<TranslationData> => {
   try {
