@@ -23,7 +23,6 @@ import { floatAnimation, getFloatingElementStyles } from 'utils/landing/animatio
 import { particleAnimation, getHoverGlowEffect } from 'utils/landing/interactiveAnimations';
 import { InteractiveParticles } from './InteractiveParticles';
 import { MagneticButton } from './MagneticElements';
-import { ScrollReveal } from './ScrollReveal';
 import { ButtonsNav } from '../ui/Buttons-nav';
 import { useTranslation } from '../../hooks/language/useTranslation';
 
@@ -96,7 +95,6 @@ export default function HeroSection() {
 
         <Grid container spacing={6} alignItems="center" sx={{ minHeight: '80vh' }}>
           <Grid size={{ xs: 12, lg: 6 }}>
-            <ScrollReveal direction="left">
               <Box sx={{ textAlign: { xs: 'center', lg: 'left' } }}>
                 <Typography
                   variant="h1"
@@ -186,11 +184,9 @@ export default function HeroSection() {
                   </Typography>
                 </Box>
               </Box>
-            </ScrollReveal>
           </Grid>
 
           <Grid size={{ xs: 12, lg: 6 }}>
-            <ScrollReveal direction="right" delay={200}>
               <Box
                 sx={{
                   position: 'relative',
@@ -238,9 +234,9 @@ export default function HeroSection() {
                   </Box>
 
                   <Stack spacing={2}>
-                    {heroFeatures.map((feature, index) => (
-                      <ScrollReveal key={index} direction="up" staggerIndex={index} delay={100}>
+                    {heroFeatures.map((feature) => (
                         <Box
+                          key={feature.title}
                           sx={{
                             display: 'flex',
                             alignItems: 'center',
@@ -292,7 +288,6 @@ export default function HeroSection() {
                             </Typography>
                           </Box>
                         </Box>
-                      </ScrollReveal>
                     ))}
                   </Stack>
                 </Card>
@@ -336,7 +331,6 @@ export default function HeroSection() {
                   <Schedule sx={{ fontSize: 32, color: 'white' }} />
                 </Box>
               </Box>
-            </ScrollReveal>
           </Grid>
         </Grid>
       </Container>
