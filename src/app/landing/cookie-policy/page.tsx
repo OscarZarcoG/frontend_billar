@@ -20,143 +20,149 @@ import {
   Chip,
 } from '@mui/material';
 import { ArrowBack } from '@mui/icons-material';
+import { useTranslation } from '../../../hooks/language/useTranslation';
 import { useRouter } from 'next/navigation';
 
 export default function CookiePolicyPage() {
   const router = useRouter();
+  const { t, language } = useTranslation();
+  const [lastUpdated, setLastUpdated] = React.useState<string>("");
+  React.useEffect(() => {
+    try {
+      const locale = language === 'es' ? 'es-ES' : 'en-US';
+      const formatted = new Intl.DateTimeFormat(locale, { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'UTC' }).format(new Date());
+      setLastUpdated(formatted);
+    } catch {
+      setLastUpdated('');
+    }
+  }, [language]);
 
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        backgroundColor: '#F2F2F7',
-        py: 4,
-      }}
-    >
+    <Box className="min-h-screen bg-background text-foreground transition-colors" sx={{ py: 4 }}>
       <Container maxWidth="md">
         <Button
           startIcon={<ArrowBack />}
           onClick={() => router.back()}
           sx={{ mb: 3 }}
         >
-          Volver
+          {t('common.back')}
         </Button>
 
         <Paper
           elevation={0}
           sx={{
             p: 4,
-            backgroundColor: 'white',
+            backgroundColor: 'var(--color-surface)',
             borderRadius: 3,
-            border: '1px solid rgba(0, 0, 0, 0.05)',
+            border: '1px solid var(--color-border)',
           }}
         >
           <Typography
             variant="h3"
             sx={{
               fontWeight: 700,
-              color: '#1D1D1F',
+              color: 'var(--color-foreground)',
               mb: 2,
               textAlign: 'center',
             }}
           >
-            Política de Cookies
+            {t('policies.cookie.title')}
           </Typography>
 
           <Typography
             variant="body2"
             sx={{
-              color: '#86868B',
+              color: 'var(--color-muted)',
               textAlign: 'center',
               mb: 4,
             }}
           >
-            Última actualización: {new Date().toLocaleDateString('es-ES')}
+            {t('policies.common.last_updated', { date: lastUpdated })}
           </Typography>
 
           <Divider sx={{ mb: 4 }} />
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              1. ¿Qué son las Cookies?
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section1.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Nos ayudan a hacer que nuestro sitio web funcione correctamente, sea más seguro, proporcione una mejor experiencia de usuario y nos permita entender cómo funciona el sitio web y analizar qué se puede mejorar.
-            </Typography>
-          </Box>
-
-          <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              2. ¿Cómo Utilizamos las Cookies?
-            </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              PoolZapp utiliza cookies para varios propósitos que se describen a continuación. Desafortunadamente, en la mayoría de los casos no hay opciones estándar de la industria para deshabilitar las cookies sin deshabilitar completamente la funcionalidad y las características que agregan a este sitio.
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section1.body')}
             </Typography>
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              3. Tipos de Cookies que Utilizamos
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section2.title')}
+            </Typography>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section2.body')}
+            </Typography>
+          </Box>
+
+          <Box sx={{ mb: 4 }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section3.title')}
             </Typography>
             
-            <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #E5E5EA', mb: 3 }}>
+            <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid var(--color-border)', mb: 3 }}>
               <Table>
                 <TableHead>
-                  <TableRow sx={{ backgroundColor: '#F2F2F7' }}>
-                    <TableCell sx={{ fontWeight: 600 }}>Tipo de Cookie</TableCell>
-                    <TableCell sx={{ fontWeight: 600 }}>Propósito</TableCell>
-                    <TableCell sx={{ fontWeight: 600 }}>Duración</TableCell>
-                    <TableCell sx={{ fontWeight: 600 }}>Esencial</TableCell>
-                  </TableRow>
+              <TableRow sx={{ backgroundColor: 'var(--color-background)' }}>
+                <TableCell sx={{ fontWeight: 600 }}>{t('policies.cookie.section3.table.headers.type')}</TableCell>
+                <TableCell sx={{ fontWeight: 600 }}>{t('policies.cookie.section3.table.headers.purpose')}</TableCell>
+                <TableCell sx={{ fontWeight: 600 }}>{t('policies.cookie.section3.table.headers.duration')}</TableCell>
+                <TableCell sx={{ fontWeight: 600 }}>{t('policies.cookie.section3.table.headers.essential')}</TableCell>
+              </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <strong>Cookies Esenciales</strong>
+                      <strong>{t('policies.cookie.section3.table.rows.essential.name')}</strong>
                     </TableCell>
-                    <TableCell>
-                      Necesarias para el funcionamiento básico del sitio web, incluyendo autenticación y seguridad
-                    </TableCell>
-                    <TableCell>Sesión / 1 año</TableCell>
-                    <TableCell>
-                      <Chip label="Sí" color="error" size="small" />
-                    </TableCell>
+                  <TableCell>
+                      {t('policies.cookie.section3.table.rows.essential.purpose')}
+                  </TableCell>
+                  <TableCell>{t('policies.cookie.section3.table.rows.essential.duration')}</TableCell>
+                  <TableCell>
+                      <Chip label={t('policies.common.yes')} color="error" size="small" />
+                  </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <strong>Cookies de Rendimiento</strong>
+                      <strong>{t('policies.cookie.section3.table.rows.performance.name')}</strong>
                     </TableCell>
-                    <TableCell>
-                      Recopilan información sobre cómo los visitantes usan el sitio web para mejorar el rendimiento
-                    </TableCell>
-                    <TableCell>1-2 años</TableCell>
-                    <TableCell>
-                      <Chip label="No" color="success" size="small" />
-                    </TableCell>
+                  <TableCell>
+                      {t('policies.cookie.section3.table.rows.performance.purpose')}
+                  </TableCell>
+                  <TableCell>{t('policies.cookie.section3.table.rows.performance.duration')}</TableCell>
+                  <TableCell>
+                      <Chip label={t('policies.common.no')} color="success" size="small" />
+                  </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <strong>Cookies Funcionales</strong>
+                      <strong>{t('policies.cookie.section3.table.rows.functional.name')}</strong>
                     </TableCell>
-                    <TableCell>
-                      Permiten que el sitio web recuerde las elecciones que hace para proporcionar funcionalidad mejorada
-                    </TableCell>
-                    <TableCell>1 año</TableCell>
-                    <TableCell>
-                      <Chip label="No" color="success" size="small" />
-                    </TableCell>
+                  <TableCell>
+                      {t('policies.cookie.section3.table.rows.functional.purpose')}
+                  </TableCell>
+                  <TableCell>{t('policies.cookie.section3.table.rows.functional.duration')}</TableCell>
+                  <TableCell>
+                      <Chip label={t('policies.common.no')} color="success" size="small" />
+                  </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <strong>Cookies de Marketing</strong>
+                      <strong>{t('policies.cookie.section3.table.rows.marketing.name')}</strong>
                     </TableCell>
-                    <TableCell>
-                      Utilizadas para rastrear visitantes en sitios web para mostrar anuncios relevantes y atractivos
-                    </TableCell>
-                    <TableCell>1-2 años</TableCell>
-                    <TableCell>
-                      <Chip label="No" color="success" size="small" />
-                    </TableCell>
+                  <TableCell>
+                      {t('policies.cookie.section3.table.rows.marketing.purpose')}
+                  </TableCell>
+                  <TableCell>{t('policies.cookie.section3.table.rows.marketing.duration')}</TableCell>
+                  <TableCell>
+                      <Chip label={t('policies.common.no')} color="success" size="small" />
+                  </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -164,60 +170,60 @@ export default function CookiePolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               4. Cookies Específicas que Utilizamos
             </Typography>
             
-            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: '#1D1D1F' }}>
+            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: 'var(--color-foreground)' }}>
               4.1 Cookies de Autenticación y Seguridad
             </Typography>
             <List sx={{ pl: 2, mb: 3 }}>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• auth_token: Mantiene su sesión de usuario activa"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• csrf_token: Protege contra ataques de falsificación de solicitudes"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• session_id: Identifica su sesión única en el servidor"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
             </List>
 
-            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: '#1D1D1F' }}>
+            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: 'var(--color-foreground)' }}>
               4.2 Cookies de Preferencias
             </Typography>
             <List sx={{ pl: 2, mb: 3 }}>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• language_preference: Recuerda su idioma preferido"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• theme_preference: Guarda su preferencia de tema (claro/oscuro)"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• cookie_consent: Registra sus preferencias de cookies"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
             </List>
 
-            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: '#1D1D1F' }}>
-              4.3 Cookies de Análisis
+            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section4_3.title')}
             </Typography>
             <List sx={{ pl: 2 }}>
               <ListItem sx={{ py: 0.5 }}>
@@ -242,11 +248,11 @@ export default function CookiePolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              5. Cookies de Terceros
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section5.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              En algunos casos especiales, también utilizamos cookies proporcionadas por terceros de confianza. Los siguientes servicios de terceros pueden establecer cookies a través de nuestro sitio:
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section5.body')}
             </Typography>
             <List sx={{ pl: 2 }}>
               <ListItem sx={{ py: 0.5 }}>
@@ -271,31 +277,31 @@ export default function CookiePolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              6. Gestión de Cookies
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section6.title')}
             </Typography>
             
-            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: '#1D1D1F' }}>
-              6.1 Configuración del Navegador
+            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section6_1.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Puede controlar y/o eliminar las cookies como desee. Puede eliminar todas las cookies que ya están en su computadora y puede configurar la mayoría de los navegadores para evitar que se coloquen. Sin embargo, si hace esto, es posible que tenga que ajustar manualmente algunas preferencias cada vez que visite un sitio.
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section6_1.body')}
             </Typography>
 
-            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: '#1D1D1F' }}>
-              6.2 Centro de Preferencias de Cookies
+            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section6_2.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Proporcionamos un centro de preferencias de cookies donde puede gestionar sus configuraciones de cookies en cualquier momento. Puede acceder a él a través del banner de cookies o en la configuración de su cuenta.
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section6_2.body')}
             </Typography>
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              7. Cookies Esenciales
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section7.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Algunas cookies son esenciales para el funcionamiento de nuestro sitio web y no pueden ser deshabilitadas. Estas incluyen cookies que:
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section7.body')}
             </Typography>
             <List sx={{ pl: 2 }}>
               <ListItem sx={{ py: 0.5 }}>
@@ -320,20 +326,20 @@ export default function CookiePolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              8. Actualizaciones de esta Política
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section8.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Podemos actualizar esta Política de Cookies ocasionalmente para reflejar cambios en las cookies que utilizamos o por otras razones operativas, legales o reglamentarias. Por favor, revise esta Política de Cookies regularmente para mantenerse informado sobre nuestro uso de cookies y tecnologías relacionadas.
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section8.body')}
             </Typography>
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              9. Más Información
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.section9.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
-              Si desea obtener más información sobre las cookies y cómo funcionan, puede visitar los siguientes recursos:
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
+              {t('policies.cookie.section9.body')}
             </Typography>
             <List sx={{ pl: 2 }}>
               <ListItem sx={{ py: 0.5 }}>
@@ -354,15 +360,15 @@ export default function CookiePolicyPage() {
           <Divider sx={{ my: 4 }} />
 
           <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              Contacto sobre Cookies
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.cookie.contact.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6 }}>
-              Si tiene preguntas sobre nuestra Política de Cookies, contáctenos:
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6 }}>
+              {t('policies.cookie.contact.body')}
               <br />
-              <strong>Email:</strong> cookies@poolzapp.com
+              <strong>{t('policies.common.email')}</strong> cookies@poolzapp.com
               <br />
-              <strong>Teléfono:</strong> +52 (55) 1234-5678
+              <strong>{t('policies.common.phone')}</strong> +52 (55) 1234-5678
             </Typography>
           </Box>
         </Paper>

@@ -14,7 +14,7 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
     <Box
       sx={{
         minHeight: '90vh',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'var(--gradient-primary)',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -148,9 +148,9 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
           <Card
             elevation={0}
             sx={{
-              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              backgroundColor: 'var(--color-overlay)',
               backdropFilter: 'blur(20px)',
-              border: '0.5px solid rgba(255, 255, 255, 0.2)',
+              border: '0.5px solid var(--color-glass-border)',
               borderRadius: 3,
               overflow: 'hidden',
             }}
@@ -159,7 +159,7 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
               variant="rectangular"
               height={200}
               sx={{
-                backgroundColor: 'rgba(60, 60, 67, 0.1)',
+                backgroundColor: 'var(--skeleton-fill)',
               }}
             />
             <CardContent sx={{ p: 3 }}>
@@ -209,9 +209,9 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
             display: 'flex',
             alignItems: 'center',
             p: 2,
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            backgroundColor: 'var(--color-overlay)',
             borderRadius: 2,
-            border: '0.5px solid rgba(255, 255, 255, 0.2)',
+            border: '0.5px solid var(--color-glass-border)',
           }}
         >
           <Skeleton
@@ -251,7 +251,7 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'var(--gradient-primary)',
         p: 2,
       }}
     >
@@ -259,10 +259,10 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
         sx={{
           width: '100%',
           maxWidth: 450,
-          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+          backgroundColor: 'var(--color-overlay)',
           backdropFilter: 'blur(20px)',
           borderRadius: 3,
-          border: '0.5px solid rgba(255, 255, 255, 0.2)',
+          border: '0.5px solid var(--color-glass-border)',
           boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
           p: 4,
         }}
@@ -271,32 +271,32 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
           variant="circular"
           width={80}
           height={80}
-          sx={{ mx: 'auto', mb: 3, bgcolor: 'rgba(0, 0, 0, 0.1)' }}
+          sx={{ mx: 'auto', mb: 3, bgcolor: 'var(--skeleton-fill)' }}
         />
         <Skeleton
           variant="text"
           width="60%"
           height={40}
-          sx={{ mx: 'auto', mb: 1, bgcolor: 'rgba(0, 0, 0, 0.1)' }}
+          sx={{ mx: 'auto', mb: 1, bgcolor: 'var(--skeleton-fill)' }}
         />
         <Skeleton
           variant="text"
           width="40%"
           height={24}
-          sx={{ mx: 'auto', mb: 4, bgcolor: 'rgba(0, 0, 0, 0.1)' }}
+          sx={{ mx: 'auto', mb: 4, bgcolor: 'var(--skeleton-fill)' }}
         />
 
         <Stack spacing={3}>
-          <Skeleton variant="rectangular" height={56} sx={{ borderRadius: 1, bgcolor: 'rgba(0, 0, 0, 0.05)' }} />
-          <Skeleton variant="rectangular" height={56} sx={{ borderRadius: 1, bgcolor: 'rgba(0, 0, 0, 0.05)' }} />
-          <Skeleton variant="rectangular" height={56} sx={{ borderRadius: 1, bgcolor: 'rgba(0, 0, 0, 0.05)' }} />
+          <Skeleton variant="rectangular" height={56} sx={{ borderRadius: 1, bgcolor: 'var(--skeleton-fill)' }} />
+          <Skeleton variant="rectangular" height={56} sx={{ borderRadius: 1, bgcolor: 'var(--skeleton-fill)' }} />
+          <Skeleton variant="rectangular" height={56} sx={{ borderRadius: 1, bgcolor: 'var(--skeleton-fill)' }} />
         </Stack>
       </Box>
     </Box>
   );
 
   const renderFooterSkeleton = () => (
-    <Box sx={{ backgroundColor: colors.text || '#1D1D1F', py: 8, color: 'white' }}>
+    <Box sx={{ backgroundColor: colors.dark, py: 8, color: 'white' }}>
       <Box sx={{ maxWidth: getContainerMaxWidth(), mx: 'auto', px: 3 }}>
         <Grid container spacing={6} sx={{ mb: 6 }}>
           <Grid size={{ xs: 12, lg: 6 }}>
@@ -324,7 +324,7 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
           </Grid>
         </Grid>
 
-        <Divider sx={{ borderColor: 'rgba(255,255,255,0.1)', mb: 4 }} />
+        <Divider sx={{ borderColor: 'var(--color-glass-border)', mb: 4 }} />
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
           <Skeleton variant="text" width={200} height={24} sx={{ bgcolor: 'rgba(255,255,255,0.1)' }} />
@@ -339,7 +339,7 @@ export default function SkeletonLoader({ variant = 'card', count = 9 }: Skeleton
   );
 
   const renderFullSkeleton = () => (
-    <Box sx={{ minHeight: '100vh', backgroundColor: 'rgba(211, 208, 210, 0.8)' }}>
+    <Box sx={{ minHeight: '100vh', backgroundColor: colors.background }}>
       {renderHeroSkeleton()}
       <Box sx={{ p: 4 }}>
         <Box sx={{ maxWidth: 1200, mx: 'auto' }}>

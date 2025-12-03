@@ -8,18 +8,18 @@ export const gradientBackgrounds = {
 };
 
 export const colors = {
-  primary: '#007AFF',
-  secondary: '#86868B',
-  text: '#1D1D1F',
-  background: '#F5F5F7',
-  white: '#FFFFFF',
-  dark: '#1D1D1F',
+  primary: 'var(--color-primary)',
+  secondary: 'var(--color-muted)',
+  text: 'var(--color-foreground)',
+  background: 'var(--color-background)',
+  white: 'var(--color-surface)',
+  dark: 'var(--color-footer)',
 };
 
-export const getGlassEffect = (opacity: number = 0.95) => ({
-  backgroundColor: `rgba(255, 255, 255, ${opacity})`,
+export const getGlassEffect = () => ({
+  backgroundColor: 'var(--color-overlay)',
   backdropFilter: 'blur(20px)',
-  border: '0.5px solid rgba(255, 255, 255, 0.2)',
+  border: '0.5px solid var(--color-glass-border)',
 });
 
 export const getSectionPadding = () => ({

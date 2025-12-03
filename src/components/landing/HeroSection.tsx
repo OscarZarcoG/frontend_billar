@@ -33,12 +33,12 @@ export default function HeroSection() {
     <Box
       sx={{
         minHeight: '100vh',
-        background: gradientBackgrounds.primary,
+        background: 'var(--gradient-primary)',
         position: 'relative',
         overflow: 'hidden',
       }}
+      className="transition-colors"
     >
-      {/* Interactive Particles Background */}
       <InteractiveParticles count={350} speed={0.5} maxSize={6} interactive={true} color="rgba(255, 255, 255, 1)" />
 
       <Box
@@ -224,7 +224,7 @@ export default function HeroSection() {
                       variant="h6"
                       sx={{
                         fontWeight: 600,
-                        color: '#1D1D1F',
+                        color: 'var(--color-foreground)',
                         textAlign: 'center',
                         mb: 3,
                       }}
@@ -257,7 +257,7 @@ export default function HeroSection() {
                               width: 40,
                               height: 40,
                               borderRadius: '50%',
-                              backgroundColor: '#007AFF',
+                              backgroundColor: 'var(--color-primary)',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
@@ -271,7 +271,7 @@ export default function HeroSection() {
                               variant="subtitle2"
                               sx={{
                                 fontWeight: 600,
-                                color: '#1D1D1F',
+                                color: 'var(--color-foreground)',
                                 fontSize: '0.875rem',
                               }}
                             >
@@ -280,7 +280,7 @@ export default function HeroSection() {
                             <Typography
                               variant="caption"
                               sx={{
-                                color: '#86868B',
+                                color: 'var(--color-muted)',
                                 fontSize: '0.75rem',
                               }}
                             >
@@ -309,7 +309,7 @@ export default function HeroSection() {
                     ...getFloatingElementStyles(),
                   }}
                 >
-                  <TableBar sx={{ fontSize: 32, color: 'white' }} />
+                  <TableBar sx={{ fontSize: 32, color: 'dark:text-foreground' }} />
                 </Box>
 
                 <Box

@@ -62,7 +62,7 @@ export const FloatingLanguageSelector: React.FC<FloatingLanguageSelectorProps> =
 
   return (
     <Zoom in={true} timeout={300}>
-      <Box sx={getPositionStyles()}>
+      <Box sx={{ ...getPositionStyles(), color: 'var(--color-foreground)' }}>
         <LanguageSelector 
           variant="compact" 
           size="small"

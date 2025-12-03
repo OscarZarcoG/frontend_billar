@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  web:
+    image: frontend-billar:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - NEXT_TELEMETRY_DISABLED=1
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+

@@ -1,0 +1,14 @@
+# Ignorar dependencias y build locales
+node_modules
+.next
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del entorno local
+.git
+.gitignore
+.vscode
+Dockerfile
+.DS_Store

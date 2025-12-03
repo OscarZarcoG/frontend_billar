@@ -94,10 +94,10 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
               size={size}
               sx={{
                 ...baseButtonStyles,
-                color: color === 'inherit' ? '#1D1D1F' : color,
-                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                color: color === 'inherit' ? 'var(--color-foreground)' : color,
+                backgroundColor: 'var(--color-overlay)',
                 backdropFilter: 'blur(20px)',
-                border: '0.5px solid rgba(60, 60, 67, 0.18)',
+                border: '0.5px solid var(--color-glass-border)',
                 '&:hover': {
                   backgroundColor: 'rgba(0, 122, 255, 0.08)',
                   borderColor: 'rgba(0, 122, 255, 0.3)',
@@ -125,10 +125,10 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
               minWidth: 'auto',
               px: 1.5,
               py: 0.75,
-              color: color === 'inherit' ? '#1D1D1F' : color,
-              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              color: color === 'inherit' ? 'var(--color-foreground)' : color,
+              backgroundColor: 'var(--color-overlay)',
               backdropFilter: 'blur(20px)',
-              border: '0.5px solid rgba(60, 60, 67, 0.18)',
+              border: '0.5px solid var(--color-glass-border)',
               '&:hover': {
                 backgroundColor: 'rgba(0, 122, 255, 0.08)',
                 borderColor: 'rgba(0, 122, 255, 0.3)',
@@ -164,10 +164,10 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
               ...baseButtonStyles,
               px: 2,
               py: 1,
-              color: color === 'inherit' ? '#1D1D1F' : color,
-              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              color: color === 'inherit' ? 'var(--color-foreground)' : color,
+              backgroundColor: 'var(--color-overlay)',
               backdropFilter: 'blur(20px)',
-              border: '0.5px solid rgba(60, 60, 67, 0.18)',
+              border: '0.5px solid var(--color-glass-border)',
               '&:hover': {
                 backgroundColor: 'rgba(0, 122, 255, 0.08)',
                 borderColor: 'rgba(0, 122, 255, 0.3)',
@@ -217,9 +217,9 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           sx: {
             mt: 1,
             borderRadius: 3,
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            backgroundColor: 'var(--color-overlay)',
             backdropFilter: 'blur(20px)',
-            border: '0.5px solid rgba(60, 60, 67, 0.18)',
+            border: '0.5px solid var(--color-glass-border)',
             boxShadow: '0 10px 40px rgba(0, 0, 0, 0.15)',
             minWidth: 180,
             '& .MuiMenuItem-root': {
@@ -258,7 +258,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
                   '& .MuiListItemText-primary': {
                     fontSize: '0.9375rem',
                     fontWeight: isSelected ? 600 : 500,
-                    color: isSelected ? '#007AFF' : '#1D1D1F',
+                    color: isSelected ? 'var(--color-primary)' : 'var(--color-foreground)',
                   },
                 }}
               />
@@ -266,7 +266,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
                 <Check
                   sx={{
                     fontSize: '1rem',
-                    color: '#007AFF',
+                    color: 'var(--color-primary)',
                     ml: 1,
                   }}
                 />

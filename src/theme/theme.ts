@@ -6,13 +6,13 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#007AFF', // Apple Blue
+      main: '#007AFF',
       light: '#5AC8FA',
       dark: '#0051D5',
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#8E8E93', // Apple Gray
+      main: '#8E8E93',
       light: '#C7C7CC',
       dark: '#636366',
       contrastText: '#FFFFFF',
@@ -42,7 +42,7 @@ const theme = createTheme({
       contrastText: '#FFFFFF',
     },
     background: {
-      default: '#F2F2F7', // Apple System Background
+      default: '#F2F2F7',
       paper: '#FFFFFF',
     },
     text: {

@@ -38,7 +38,7 @@ export default function ServicesSection() {
             variant="h2"
             sx={{
               fontWeight: 800,
-              color: '#1D1D1F',
+              color: colors.text,
               fontSize: { xs: '2rem', md: '2.5rem', lg: '3rem' },
               lineHeight: 1.2,
               mb: 3,
@@ -60,7 +60,7 @@ export default function ServicesSection() {
           <Typography
             variant="h6"
             sx={{
-              color: '#86868B',
+              color: colors.secondary,
               fontSize: '1.125rem',
               fontWeight: 400,
               maxWidth: 600,
@@ -79,8 +79,8 @@ export default function ServicesSection() {
                 elevation={0}
                 sx={{
                   height: '100%',
-                  backgroundColor: 'white',
-                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  backgroundColor: colors.white,
+                  border: '1px solid var(--color-border)',
                   borderRadius: 3,
                   overflow: 'hidden',
                   ...getCardHoverStyles(),
@@ -107,14 +107,14 @@ export default function ServicesSection() {
                         flexShrink: 0,
                       }}
                     >
-                      <service.icon sx={{ fontSize: 32 }} />
+                      <service.icon sx={{ fontSize: 32, color: 'white' }} />
                     </Box>
                     <Box sx={{ flex: 1 }}>
                       <Typography
                         variant="h5"
                         sx={{
                           fontWeight: 700,
-                          color: '#1D1D1F',
+                          color: colors.text,
                           mb: 1,
                           fontSize: '1.25rem',
                         }}
@@ -124,7 +124,7 @@ export default function ServicesSection() {
                       <Typography
                         variant="body1"
                         sx={{
-                          color: '#86868B',
+                          color: colors.secondary,
                           lineHeight: 1.6,
                           fontSize: '0.9375rem',
                         }}
@@ -153,7 +153,7 @@ export default function ServicesSection() {
                         <Typography
                           variant="body2"
                           sx={{
-                            color: '#1D1D1F',
+                            color: colors.text,
                             fontSize: '0.875rem',
                             fontWeight: 500,
                           }}
@@ -190,8 +190,8 @@ export default function ServicesSection() {
                   elevation={0}
                   sx={{
                     height: '100%',
-                    backgroundColor: 'white',
-                    border: '1px solid rgba(0, 0, 0, 0.05)',
+                    backgroundColor: colors.white,
+                    border: '1px solid var(--color-border)',
                     borderRadius: 2,
                     p: 3,
                     textAlign: 'center',
@@ -203,7 +203,7 @@ export default function ServicesSection() {
                       width: 56,
                       height: 56,
                       borderRadius: '50%',
-                      backgroundColor: '#F5F5F7',
+                      backgroundColor: colors.background,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -211,13 +211,13 @@ export default function ServicesSection() {
                       mb: 2,
                     }}
                   >
-                    <feature.icon />
+                    <feature.icon sx={{ color: colors.text }} />
                   </Box>
                   <Typography
                     variant="h6"
                     sx={{
                       fontWeight: 600,
-                      color: '#1D1D1F',
+                      color: colors.text,
                       mb: 1,
                       fontSize: '1rem',
                     }}
@@ -227,7 +227,7 @@ export default function ServicesSection() {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: '#86868B',
+                      color: colors.secondary,
                       fontSize: '0.875rem',
                       lineHeight: 1.5,
                     }}
@@ -261,8 +261,8 @@ export default function ServicesSection() {
                   elevation={0}
                   sx={{
                     height: '100%',
-                    backgroundColor: 'white',
-                    border: '1px solid rgba(0, 0, 0, 0.05)',
+                    backgroundColor: colors.white,
+                    border: '1px solid var(--color-border)',
                     borderRadius: 3,
                     p: 4,
                     ...getCardHoverStyles(),
@@ -273,7 +273,7 @@ export default function ServicesSection() {
                       sx={{
                         width: 48,
                         height: 48,
-                        backgroundColor: '#007AFF',
+                        backgroundColor: colors.primary,
                         fontWeight: 600,
                       }}
                     >
@@ -284,7 +284,7 @@ export default function ServicesSection() {
                         variant="subtitle1"
                         sx={{
                           fontWeight: 600,
-                          color: '#1D1D1F',
+                          color: colors.text,
                           fontSize: '0.9375rem',
                         }}
                       >
@@ -293,7 +293,7 @@ export default function ServicesSection() {
                       <Typography
                         variant="body2"
                         sx={{
-                          color: '#86868B',
+                          color: colors.secondary,
                           fontSize: '0.8125rem',
                         }}
                       >
@@ -311,7 +311,7 @@ export default function ServicesSection() {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: '#1D1D1F',
+                      color: colors.text,
                       fontSize: '0.9375rem',
                       lineHeight: 1.6,
                       fontStyle: 'italic',
@@ -332,7 +332,7 @@ export default function ServicesSection() {
             py: 6,
             px: 4,
             borderRadius: 4,
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            background: 'var(--gradient-primary)',
             color: 'white',
           }}
         >

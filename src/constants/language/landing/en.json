@@ -306,5 +306,117 @@
     "deleted": "Successfully deleted",
     "updated": "Successfully updated",
     "created": "Successfully created"
+  },
+  "policies": {
+    "common": {
+      "last_updated": "Last updated: {{date}}",
+      "yes": "Yes",
+      "no": "No",
+      "email": "Email:",
+      "phone": "Phone:",
+      "address": "Address:"
+    },
+    "cookie": {
+      "title": "Cookie Policy",
+      "section1": {
+        "title": "1. What Are Cookies?",
+        "body": "Cookies are small text files stored on your device when you visit a website. They help our site work correctly, more securely, provide a better user experience, and allow us to understand how the site works and analyze what can be improved."
+      },
+      "section2": {
+        "title": "2. How We Use Cookies",
+        "body": "PoolZapp uses cookies for various purposes described below. Unfortunately, in most cases there are no industry-standard options to disable cookies without completely disabling the functionality and features they add to this site."
+      },
+      "section3": {
+        "title": "3. Types of Cookies We Use",
+        "table": {
+          "headers": {
+            "type": "Cookie Type",
+            "purpose": "Purpose",
+            "duration": "Duration",
+            "essential": "Essential"
+          },
+          "rows": {
+            "essential": {
+              "name": "Essential Cookies",
+              "purpose": "Required for the basic operation of the website, including authentication and security",
+              "duration": "Session / 1 year"
+            },
+            "performance": {
+              "name": "Performance Cookies",
+              "purpose": "Collect information about how visitors use the site to improve performance",
+              "duration": "1–2 years"
+            },
+            "functional": {
+              "name": "Functional Cookies",
+              "purpose": "Allow the site to remember choices you make to provide enhanced functionality",
+              "duration": "1 year"
+            },
+            "marketing": {
+              "name": "Marketing Cookies",
+              "purpose": "Used to track visitors across websites to display relevant and engaging ads",
+              "duration": "1–2 years"
+            }
+          }
+        }
+      },
+      "section4_3": {
+        "title": "4.3 Analytics Cookies"
+      },
+      "section5": {
+        "title": "5. Third-Party Cookies",
+        "body": "In some special cases, we also use cookies provided by trusted third parties. The following third-party services may set cookies through our site:"
+      },
+      "section6": {
+        "title": "6. Managing Cookies"
+      },
+      "section6_1": {
+        "title": "6.1 Browser Settings",
+        "body": "You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. However, if you do this, you may have to manually adjust some preferences each time you visit a site."
+      },
+      "section6_2": {
+        "title": "6.2 Cookie Preferences Center",
+        "body": "We provide a cookie preferences center where you can manage your cookie settings at any time. You can access it via the cookie banner or in your account settings."
+      },
+      "section7": {
+        "title": "7. Essential Cookies",
+        "body": "Some cookies are essential for our website to function and cannot be disabled. These include cookies that:"
+      },
+      "section8": {
+        "title": "8. Updates to this Policy",
+        "body": "We may update this Cookie Policy from time to time to reflect changes to the cookies we use or for other operational, legal or regulatory reasons. Please review this Cookie Policy regularly to stay informed about our use of cookies and related technologies."
+      },
+      "section9": {
+        "title": "9. More Information",
+        "body": "If you would like more information about cookies and how they work, you can visit the following resources:"
+      },
+      "contact": {
+        "title": "Contact about Cookies",
+        "body": "If you have questions about our Cookie Policy, contact us:"
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "contact": {
+        "title": "Privacy Contact",
+        "body": "If you have questions about this Privacy Policy or wish to exercise your rights, contact us:"
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "contact": {
+        "title": "Contact",
+        "body": "If you have any questions about these Terms of Service, contact us at:"
+      }
+    },
+    "gdpr": {
+      "title": "GDPR Compliance",
+      "subtitle": "General Data Protection Regulation",
+      "alert_title": "Privacy Commitment",
+      "alert_body": "PoolZapp is committed to protecting your personal data and complying with the European Union’s General Data Protection Regulation (GDPR).",
+      "dpo": {
+        "title": "Data Protection Officer",
+        "body": "For inquiries related to GDPR and data protection, contact us:"
+      }
+    }
   }
 }

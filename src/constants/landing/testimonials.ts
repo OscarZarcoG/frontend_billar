@@ -46,4 +46,46 @@ export const testimonials = [
     comment: 'El sistema de reportes nos ayudó a optimizar completamente el negocio.',
     avatar: 'RS',
   },
+  {
+    name: 'Luis Fernández',
+    business: 'Billar & Pool',
+    rating: 5,
+    comment: 'Excelente atención al cliente. Siempre están dispuestos a ayudar.',
+    avatar: 'LF',
+  },
+  {
+    name: 'María López',
+    business: 'Billar & Pool',
+    rating: 5,
+    comment: 'Muy satisfecha con el servicio. El personal es muy amable y profesional.',
+    avatar: 'ML',
+  },
+  {
+    name: 'Javier Ramírez',
+    business: 'Billar & Pool',
+    rating: 5,
+    comment: 'Excelente servicio. La atención es rápida y el personal es muy amable.',
+    avatar: 'JR',
+  },
+  {
+    name: 'Fernando Rodríguez',
+    business: 'Billar & Pool',
+    rating: 5,
+    comment: 'Muy satisfecha con el servicio. El personal es muy amable y profesional.',
+    avatar: 'FR',
+  },
+  {
+    name: 'Sara González',
+    business: 'Billar & Pool',
+    rating: 5,
+    comment: 'Muy satisfecha con el servicio. El personal es muy amable y profesional.',
+    avatar: 'SG',
+  },
+  {
+    name: 'Sofía Martínez',
+    business: 'Billar & Pool',
+    rating: 5,
+    comment: 'Muy satisfecha con el servicio. El personal es muy amable y profesional.',
+    avatar: 'SM',
+  }
 ];

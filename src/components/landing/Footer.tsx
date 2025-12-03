@@ -30,7 +30,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: colors.text,
+        backgroundColor: colors.dark,
         color: 'white',
         ...getSectionPadding(),
       }}
@@ -109,11 +109,11 @@ export default function Footer() {
                       key={link.label}
                       href={link.href}
                       sx={{
-                        color: '#86868B',
+                        color: colors.secondary,
                         textDecoration: 'none',
                         fontSize: '0.875rem',
                         '&:hover': {
-                          color: '#007AFF',
+                          color: colors.primary,
                         },
                       }}
                     >
@@ -141,11 +141,11 @@ export default function Footer() {
                       key={link.label}
                       href={link.href}
                       sx={{
-                        color: '#86868B',
+                        color: colors.secondary,
                         textDecoration: 'none',
                         fontSize: '0.875rem',
                         '&:hover': {
-                          color: '#007AFF',
+                          color: colors.primary,
                         },
                       }}
                     >
@@ -173,11 +173,11 @@ export default function Footer() {
                       key={link.label}
                       href={link.href}
                       sx={{
-                        color: '#86868B',
+                        color: colors.secondary,
                         textDecoration: 'none',
                         fontSize: '0.875rem',
                         '&:hover': {
-                          color: '#007AFF',
+                          color: colors.primary,
                         },
                       }}
                     >
@@ -202,7 +202,7 @@ export default function Footer() {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: '#A1A1A6',
+                    color: colors.secondary,
                     mb: 3,
                     fontSize: '0.875rem',
                     lineHeight: 1.5,
@@ -215,12 +215,12 @@ export default function Footer() {
                   variant="outlined"
                   fullWidth
                   sx={{
-                    borderColor: '#007AFF',
-                    color: '#007AFF',
+                    borderColor: colors.primary,
+                    color: colors.primary,
                     mb: 3,
                     '&:hover': {
                       backgroundColor: 'rgba(0, 122, 255, 0.1)',
-                      borderColor: '#007AFF',
+                      borderColor: colors.primary,
                     },
                   }}
                 >
@@ -233,7 +233,7 @@ export default function Footer() {
           </Grid>
         </Grid>
 
-        <Divider sx={{ borderColor: '#2C2C2E', mb: 4 }} />
+        <Divider sx={{ borderColor: 'var(--color-border)', mb: 4 }} />
 
         <Box
           sx={{
@@ -248,7 +248,7 @@ export default function Footer() {
             <Typography
               variant="body2"
               sx={{
-                color: '#A1A1A6',
+                color: colors.secondary,
                 fontSize: '0.875rem',
                 mb: 2,
               }}
@@ -261,12 +261,12 @@ export default function Footer() {
                   key={index}
                   href={link.href}
                   sx={{
-                    color: '#A1A1A6',
+                    color: colors.secondary,
                     textDecoration: 'none',
                     fontSize: '0.8125rem',
                     transition: 'color 0.2s ease',
                     '&:hover': {
-                      color: '#007AFF',
+                      color: colors.primary,
                     },
                   }}
                 >
@@ -300,7 +300,7 @@ export default function Footer() {
                     height: 40,
                     transition: 'all 0.2s ease',
                     '&:hover': {
-                      color: '#007AFF',
+                      color: colors.primary,
                       backgroundColor: 'rgba(0, 122, 255, 0.1)',
                       transform: 'translateY(-2px)',
                     },

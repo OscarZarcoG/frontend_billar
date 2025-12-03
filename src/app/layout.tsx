@@ -4,7 +4,7 @@ import "./globals.css";
 import ThemeProvider from "../providers/ThemeProvider";
 import { LanguageProvider } from "../contexts/language/LanguageContext";
 import { AuthProvider } from "../contexts/auth/AuthContext";
-import { FloatingLanguageSelector } from "../components/ui/FloatingLanguageSelector";
+import FloatingActionsMenu from "../components/ui/FloatingActionsMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +35,7 @@ export default function RootLayout({
           <LanguageProvider>
             <ThemeProvider>
               {children}
-              <FloatingLanguageSelector position="top-right" />
+              <FloatingActionsMenu />
             </ThemeProvider>
           </LanguageProvider>
         </AuthProvider>

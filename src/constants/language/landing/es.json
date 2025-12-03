@@ -305,5 +305,117 @@
     "deleted": "Eliminado exitosamente",
     "updated": "Actualizado exitosamente",
     "created": "Creado exitosamente"
+  },
+  "policies": {
+    "common": {
+      "last_updated": "Última actualización: {{date}}",
+      "yes": "Sí",
+      "no": "No",
+      "email": "Email:",
+      "phone": "Teléfono:",
+      "address": "Dirección:"
+    },
+    "cookie": {
+      "title": "Política de Cookies",
+      "section1": {
+        "title": "1. ¿Qué son las Cookies?",
+        "body": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Nos ayudan a que nuestro sitio web funcione correctamente, sea más seguro, proporcione una mejor experiencia de usuario y nos permita entender cómo funciona el sitio web y analizar qué se puede mejorar."
+      },
+      "section2": {
+        "title": "2. ¿Cómo Utilizamos las Cookies?",
+        "body": "PoolZapp utiliza cookies para varios propósitos que se describen a continuación. En la mayoría de los casos no hay opciones estándar de la industria para deshabilitar las cookies sin deshabilitar completamente la funcionalidad y las características que agregan a este sitio."
+      },
+      "section3": {
+        "title": "3. Tipos de Cookies que Utilizamos",
+        "table": {
+          "headers": {
+            "type": "Tipo de Cookie",
+            "purpose": "Propósito",
+            "duration": "Duración",
+            "essential": "Esencial"
+          },
+          "rows": {
+            "essential": {
+              "name": "Cookies Esenciales",
+              "purpose": "Necesarias para el funcionamiento básico del sitio web, incluyendo autenticación y seguridad",
+              "duration": "Sesión / 1 año"
+            },
+            "performance": {
+              "name": "Cookies de Rendimiento",
+              "purpose": "Recopilan información sobre cómo los visitantes usan el sitio web para mejorar el rendimiento",
+              "duration": "1–2 años"
+            },
+            "functional": {
+              "name": "Cookies Funcionales",
+              "purpose": "Permiten que el sitio web recuerde las elecciones que hace para proporcionar funcionalidad mejorada",
+              "duration": "1 año"
+            },
+            "marketing": {
+              "name": "Cookies de Marketing",
+              "purpose": "Utilizadas para rastrear visitantes en sitios web para mostrar anuncios relevantes y atractivos",
+              "duration": "1–2 años"
+            }
+          }
+        }
+      },
+      "section4_3": {
+        "title": "4.3 Cookies de Análisis"
+      },
+      "section5": {
+        "title": "5. Cookies de Terceros",
+        "body": "En algunos casos especiales, también utilizamos cookies proporcionadas por terceros de confianza. Los siguientes servicios de terceros pueden establecer cookies a través de nuestro sitio:"
+      },
+      "section6": {
+        "title": "6. Gestión de Cookies"
+      },
+      "section6_1": {
+        "title": "6.1 Configuración del Navegador",
+        "body": "Puede controlar y/o eliminar las cookies como desee. Puede eliminar todas las cookies que ya están en su computadora y puede configurar la mayoría de los navegadores para evitar que se coloquen. Sin embargo, si hace esto, es posible que tenga que ajustar manualmente algunas preferencias cada vez que visite un sitio."
+      },
+      "section6_2": {
+        "title": "6.2 Centro de Preferencias de Cookies",
+        "body": "Proporcionamos un centro de preferencias de cookies donde puede gestionar sus configuraciones de cookies en cualquier momento. Puede acceder a él a través del banner de cookies o en la configuración de su cuenta."
+      },
+      "section7": {
+        "title": "7. Cookies Esenciales",
+        "body": "Algunas cookies son esenciales para el funcionamiento de nuestro sitio web y no pueden ser deshabilitadas. Estas incluyen cookies que:"
+      },
+      "section8": {
+        "title": "8. Actualizaciones de esta Política",
+        "body": "Podemos actualizar esta Política de Cookies ocasionalmente para reflejar cambios en las cookies que utilizamos o por otras razones operativas, legales o reglamentarias. Por favor, revise esta Política de Cookies regularmente para mantenerse informado sobre nuestro uso de cookies y tecnologías relacionadas."
+      },
+      "section9": {
+        "title": "9. Más Información",
+        "body": "Si desea obtener más información sobre las cookies y cómo funcionan, puede visitar los siguientes recursos:"
+      },
+      "contact": {
+        "title": "Contacto sobre Cookies",
+        "body": "Si tiene preguntas sobre nuestra Política de Cookies, contáctenos:"
+      }
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "contact": {
+        "title": "Contacto para Asuntos de Privacidad",
+        "body": "Si tiene preguntas sobre esta Política de Privacidad o desea ejercer sus derechos, contáctenos:"
+      }
+    },
+    "terms": {
+      "title": "Términos de Servicio",
+      "contact": {
+        "title": "Contacto",
+        "body": "Si tiene alguna pregunta sobre estos Términos de Servicio, contáctenos en:"
+      }
+    },
+    "gdpr": {
+      "title": "Cumplimiento GDPR",
+      "subtitle": "Reglamento General de Protección de Datos",
+      "alert_title": "Compromiso con la Privacidad",
+      "alert_body": "PoolZapp está comprometido con la protección de sus datos personales y el cumplimiento del Reglamento General de Protección de Datos (GDPR) de la Unión Europea.",
+      "dpo": {
+        "title": "Oficial de Protección de Datos",
+        "body": "Para consultas relacionadas con GDPR y protección de datos, contáctenos:"
+      }
+    }
   }
 }

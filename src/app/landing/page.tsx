@@ -8,12 +8,7 @@ import Footer from '@/components/landing/Footer';
 export default function LandingPage() {
   
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        backgroundColor: '#FFFFFF',
-      }}
-    >
+    <Box className="min-h-screen bg-background text-foreground transition-colors">
       <HeroSection />
       <ServicesSection />
       <Footer />

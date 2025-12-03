@@ -19,116 +19,122 @@ import {
   TableRow,
 } from '@mui/material';
 import { ArrowBack } from '@mui/icons-material';
+import { useTranslation } from '../../../hooks/language/useTranslation';
 import { useRouter } from 'next/navigation';
 
 export default function PrivacyPolicyPage() {
   const router = useRouter();
+  const { t, language } = useTranslation();
+  const [lastUpdated, setLastUpdated] = React.useState<string>("");
+  React.useEffect(() => {
+    try {
+      const locale = language === 'es' ? 'es-ES' : 'en-US';
+      const formatted = new Intl.DateTimeFormat(locale, { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'UTC' }).format(new Date());
+      setLastUpdated(formatted);
+    } catch {
+      setLastUpdated('');
+    }
+  }, [language]);
 
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        backgroundColor: '#F2F2F7',
-        py: 4,
-      }}
-    >
+    <Box className="min-h-screen bg-background text-foreground transition-colors" sx={{ py: 4 }}>
       <Container maxWidth="md">
         <Button
           startIcon={<ArrowBack />}
           onClick={() => router.back()}
           sx={{ mb: 3 }}
         >
-          Volver
+          {t('common.back')}
         </Button>
 
         <Paper
           elevation={0}
           sx={{
             p: 4,
-            backgroundColor: 'white',
+            backgroundColor: 'var(--color-surface)',
             borderRadius: 3,
-            border: '1px solid rgba(0, 0, 0, 0.05)',
+            border: '1px solid var(--color-border)',
           }}
         >
           <Typography
             variant="h3"
             sx={{
               fontWeight: 700,
-              color: '#1D1D1F',
+              color: 'var(--color-foreground)',
               mb: 2,
               textAlign: 'center',
             }}
           >
-            Política de Privacidad
+            {t('policies.privacy.title')}
           </Typography>
 
           <Typography
             variant="body2"
             sx={{
-              color: '#86868B',
+              color: 'var(--color-muted)',
               textAlign: 'center',
               mb: 4,
             }}
           >
-            Última actualización: {new Date().toLocaleDateString('es-ES')}
+            {t('policies.common.last_updated', { date: lastUpdated })}
           </Typography>
 
           <Divider sx={{ mb: 4 }} />
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               1. Introducción
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               En PoolZapp, respetamos su privacidad y nos comprometemos a proteger sus datos personales. Esta Política de Privacidad explica cómo recopilamos, utilizamos, almacenamos y protegemos su información cuando utiliza nuestros servicios.
             </Typography>
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               2. Información que Recopilamos
             </Typography>
             
-            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: '#1D1D1F' }}>
+            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: 'var(--color-foreground)' }}>
               2.1 Información Personal
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               Recopilamos la siguiente información personal cuando usted:
             </Typography>
             <List sx={{ pl: 2, mb: 3 }}>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• Nombre completo y datos de contacto"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• Dirección de correo electrónico"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• Número de teléfono"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• Información de facturación y pago"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
               <ListItem sx={{ py: 0.5 }}>
                 <ListItemText 
                   primary="• Datos del negocio (nombre, dirección, tipo de establecimiento)"
-                  primaryTypographyProps={{ color: '#424245' }}
+                  primaryTypographyProps={{ color: 'var(--color-muted)' }}
                 />
               </ListItem>
             </List>
 
-            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: '#1D1D1F' }}>
+            <Typography variant="h6" sx={{ fontWeight: 500, mb: 1, color: 'var(--color-foreground)' }}>
               2.2 Información de Uso
             </Typography>
             <List sx={{ pl: 2 }}>
@@ -154,10 +160,10 @@ export default function PrivacyPolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               3. Cómo Utilizamos su Información
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               Utilizamos su información personal para:
             </Typography>
             <List sx={{ pl: 2 }}>
@@ -201,13 +207,13 @@ export default function PrivacyPolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               4. Base Legal para el Procesamiento
             </Typography>
-            <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #E5E5EA' }}>
+            <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid var(--color-border)' }}>
               <Table>
                 <TableHead>
-                  <TableRow sx={{ backgroundColor: '#F2F2F7' }}>
+                  <TableRow sx={{ backgroundColor: 'var(--color-background)' }}>
                     <TableCell sx={{ fontWeight: 600 }}>Propósito</TableCell>
                     <TableCell sx={{ fontWeight: 600 }}>Base Legal</TableCell>
                   </TableRow>
@@ -239,10 +245,10 @@ export default function PrivacyPolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               5. Compartir Información
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               No vendemos, intercambiamos o transferimos su información personal a terceros, excepto en los siguientes casos:
             </Typography>
             <List sx={{ pl: 2 }}>
@@ -274,10 +280,10 @@ export default function PrivacyPolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               6. Seguridad de los Datos
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción, incluyendo:
             </Typography>
             <List sx={{ pl: 2 }}>
@@ -309,10 +315,10 @@ export default function PrivacyPolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               7. Sus Derechos
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               Bajo las leyes de protección de datos aplicables, usted tiene los siguientes derechos:
             </Typography>
             <List sx={{ pl: 2 }}>
@@ -356,28 +362,28 @@ export default function PrivacyPolicyPage() {
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               8. Retención de Datos
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               Conservamos su información personal solo durante el tiempo necesario para cumplir con los propósitos para los cuales fue recopilada, incluyendo cualquier requisito legal, contable o de informes.
             </Typography>
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               9. Transferencias Internacionales
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               Sus datos pueden ser transferidos y procesados en países fuera de su país de residencia. Nos aseguramos de que dichas transferencias cumplan con las leyes de protección de datos aplicables mediante el uso de salvaguardas apropiadas.
             </Typography>
           </Box>
 
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
+            <Typography variant="h5" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
               10. Cambios a esta Política
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6, mb: 2 }}>
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6, mb: 2 }}>
               Podemos actualizar esta Política de Privacidad ocasionalmente. Le notificaremos sobre cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de &ldquo;última actualización&rdquo;.
             </Typography>
           </Box>
@@ -385,17 +391,17 @@ export default function PrivacyPolicyPage() {
           <Divider sx={{ my: 4 }} />
 
           <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: '#1D1D1F' }}>
-              Contacto para Asuntos de Privacidad
+            <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: 'var(--color-foreground)' }}>
+              {t('policies.privacy.contact.title')}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#424245', lineHeight: 1.6 }}>
-              Si tiene preguntas sobre esta Política de Privacidad o desea ejercer sus derechos, contáctenos:
+            <Typography variant="body1" sx={{ color: 'var(--color-muted)', lineHeight: 1.6 }}>
+              {t('policies.privacy.contact.body')}
               <br />
-              <strong>Email:</strong> privacy@poolzapp.com
+              <strong>{t('policies.common.email')}</strong> privacy@poolzapp.com
               <br />
-              <strong>Teléfono:</strong> +52 (55) 1234-5678
+              <strong>{t('policies.common.phone')}</strong> +52 (55) 1234-5678
               <br />
-              <strong>Dirección:</strong> Av. Reforma 123, Ciudad de México, México
+              <strong>{t('policies.common.address')}</strong> Av. Reforma 123, Ciudad de México, México
             </Typography>
           </Box>
         </Paper>
